@@ -14,6 +14,10 @@ import ServiceWhiteningPage from "@/pages/ServiceWhiteningPage";
 import ServicePediatricPage from "@/pages/ServicePediatricPage";
 import ServiceCrownsPage from "@/pages/ServiceCrownsPage";
 import ServiceImplantsPage from "@/pages/ServiceImplantsPage";
+import ServiceDenturesPage from "@/pages/ServiceDenturesPage";
+import ServiceOrthodonticsPage from "@/pages/ServiceOrthodonticsPage";
+import ServiceGumPage from "@/pages/ServiceGumPage";
+import ServiceGeneralPage from "@/pages/ServiceGeneralPage";
 import AboutPage from "@/pages/AboutPage";
 import TestimonialsPage from "@/pages/TestimonialsPage";
 import FAQPage from "@/pages/FAQPage";
@@ -30,6 +34,10 @@ function Router() {
       <Route path="/services/pediatric" component={ServicePediatricPage} />
       <Route path="/services/crowns" component={ServiceCrownsPage} />
       <Route path="/services/implants" component={ServiceImplantsPage} />
+      <Route path="/services/dentures" component={ServiceDenturesPage} />
+      <Route path="/services/orthodontics" component={ServiceOrthodonticsPage} />
+      <Route path="/services/gum" component={ServiceGumPage} />
+      <Route path="/services/general" component={ServiceGeneralPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/testimonials" component={TestimonialsPage} />
       <Route path="/faq" component={FAQPage} />
