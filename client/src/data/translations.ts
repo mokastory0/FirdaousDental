@@ -56,7 +56,7 @@ export const translations = {
     'about.satisfaction': 'Satisfaction',
     
     // Footer
-    'footer.address': 'Cabinet Dentaire Dr. Firdaous MOUSTAINE, Casablanca, Maroc',
+    'footer.address': 'Immeuble 3, étage 2, Numéro 7, Résidence Nadia, 13 Bd Brahim Roudani, Casablanca 20390',
     'footer.phone': 'Téléphone',
     'footer.email': 'Email',
     'footer.hours': 'Horaires',
@@ -132,7 +132,7 @@ export const translations = {
     'about.satisfaction': 'الرضا',
     
     // Footer
-    'footer.address': 'عيادة د. فردوس مستين، الدار البيضاء، المغرب',
+    'footer.address': 'العمارة ٣، الطابق ٢، رقم ٧، إقامة نادية، ١٣ شارع إبراهيم الروداني، الدار البيضاء ٢٠٣٩٠',
     'footer.phone': 'الهاتف',
     'footer.email': 'البريد الإلكتروني',
     'footer.hours': 'ساعات العمل',
@@ -208,7 +208,7 @@ export const translations = {
     'about.satisfaction': 'Satisfaction',
     
     // Footer
-    'footer.address': 'Cabinet Dentaire Dr. Firdaous MOUSTAINE, Casablanca, Morocco',
+    'footer.address': 'Building 3, 2nd Floor, Nb 7, Résidence Nadia, 13 Bd Brahim Roudani, Casablanca 20390',
     'footer.phone': 'Phone',
     'footer.email': 'Email',
     'footer.hours': 'Office Hours',

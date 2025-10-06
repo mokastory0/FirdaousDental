@@ -3,7 +3,46 @@ import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+
+  const services = {
+    fr: [
+      { href: '/services/whitening', label: 'Blanchiment Dentaire' },
+      { href: '/services/implants', label: 'Implantologie' },
+      { href: '/services/orthodontics', label: 'Orthodontie' },
+      { href: '/services/pediatric', label: 'Pédodontie' },
+    ],
+    ar: [
+      { href: '/services/whitening', label: 'تبييض الأسنان' },
+      { href: '/services/implants', label: 'زراعة الأسنان' },
+      { href: '/services/orthodontics', label: 'تقويم الأسنان' },
+      { href: '/services/pediatric', label: 'طب أسنان الأطفال' },
+    ],
+    en: [
+      { href: '/services/whitening', label: 'Teeth Whitening' },
+      { href: '/services/implants', label: 'Dental Implants' },
+      { href: '/services/orthodontics', label: 'Orthodontics' },
+      { href: '/services/pediatric', label: 'Pediatric Dentistry' },
+    ],
+  };
+
+  const copyright = {
+    fr: '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. Tous droits réservés.',
+    ar: '© ٢٠٢٥ عيادة الأسنان للدكتورة فردوس مستين. جميع الحقوق محفوظة.',
+    en: '© 2025 Dr. Firdaous MOUSTAINE Dental Clinic. All rights reserved.',
+  };
+
+  const contactLabel = {
+    fr: 'Contact',
+    ar: 'اتصل بنا',
+    en: 'Contact',
+  };
+
+  const sundayClosed = {
+    fr: 'Dimanche: Fermé',
+    ar: 'الأحد: مغلق',
+    en: 'Sunday: Closed',
+  };
 
   return (
     <footer className="border-t bg-card mt-auto">
@@ -19,15 +58,18 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">{t('nav.services')}</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link href="/services/whitening" className="hover:text-primary transition-colors">Blanchiment Dentaire</Link></li>
-              <li><Link href="/services/implants" className="hover:text-primary transition-colors">Implantologie</Link></li>
-              <li><Link href="/services/orthodontics" className="hover:text-primary transition-colors">Orthodontie</Link></li>
-              <li><Link href="/services/pediatric" className="hover:text-primary transition-colors">Pédodontie</Link></li>
+              {services[language].map((service) => (
+                <li key={service.href}>
+                  <Link href={service.href} className="hover:text-primary transition-colors">
+                    {service.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">{contactLabel[language]}</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -35,11 +77,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+212 665 477 745</span>
+                <span dir="ltr">+212 665 477 745</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>moustainefirdaous@gmail.com</span>
+                <span dir="ltr">moustainefirdaous@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -52,13 +94,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>{t('footer.hours.mon-fri')}</li>
               <li>{t('footer.hours.sat')}</li>
-              <li className="text-xs pt-2">Dimanche: Fermé</li>
+              <li className="text-xs pt-2">{sundayClosed[language]}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. Tous droits réservés.</p>
+          <p>{copyright[language]}</p>
         </div>
       </div>
     </footer>
