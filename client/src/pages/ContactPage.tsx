@@ -8,7 +8,7 @@ export default function ContactPage() {
   const { t } = useLanguage();
 
   const handleWhatsAppClick = () => {
-    const phone = '212XXXXXXXXX';
+    const phone = '212665477745';
     const message = encodeURIComponent('Bonjour, je souhaiterais prendre rendez-vous...');
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1">
                       <div className="font-semibold mb-1">Téléphone</div>
-                      <p className="text-muted-foreground mb-2">+212 5XX-XXXXXX</p>
+                      <p className="text-muted-foreground mb-2">+212 665 477 745</p>
                       <Button size="sm" variant="outline" data-testid="button-call">
                         Appeler maintenant
                       </Button>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="font-semibold mb-1">Email</div>
-                      <p className="text-muted-foreground">contact@dentiste-casa.ma</p>
+                      <p className="text-muted-foreground">moustainefirdaous@gmail.com</p>
                     </div>
                   </div>
                 </CardContent>

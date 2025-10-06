@@ -35,11 +35,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+212 5XX-XXXXXX</span>
+                <span>+212 665 477 745</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 flex-shrink-0" />
-                <span>contact@dentiste-casa.ma</span>
+                <span>moustainefirdaous@gmail.com</span>
               </li>
             </ul>
           </div>

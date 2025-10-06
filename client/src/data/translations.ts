@@ -1,0 +1,231 @@
+export type Language = 'fr' | 'ar' | 'en';
+
+export const translations = {
+  fr: {
+    // Navigation
+    'nav.home': 'Accueil',
+    'nav.services': 'Services',
+    'nav.about': 'À Propos',
+    'nav.testimonials': 'Avis',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contact',
+    
+    // CTA Buttons
+    'cta.book': 'Prendre Rendez-vous',
+    'cta.call': 'Appeler',
+    'cta.whatsapp': 'WhatsApp',
+    'cta.readMore': 'En savoir plus',
+    'cta.backToServices': 'Retour aux services',
+    'cta.viewAll': 'Voir tous les avis',
+    
+    // Hero Section
+    'hero.title': 'Votre sourire, notre priorité',
+    'hero.subtitle': 'Cabinet Dentaire Moderne à Casablanca',
+    'hero.description': 'Découvrez des soins dentaires d\'exception avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un environnement moderne et chaleureux.',
+    'hero.cta.primary': 'Prendre Rendez-vous',
+    'hero.cta.secondary': 'Nos Services',
+    'hero.rating': '4.8★ sur Google | 250+ avis patients',
+    
+    // Services
+    'services.title': 'Nos Services',
+    'services.subtitle': 'Des soins dentaires complets pour toute la famille',
+    'services.whitening.title': 'Blanchiment Dentaire',
+    'services.whitening.desc': 'Un sourire éclatant grâce à nos techniques professionnelles de blanchiment dentaire sûres et efficaces à Casablanca.',
+    'services.crowns.title': 'Couronne et Bridge',
+    'services.crowns.desc': 'Restauration dentaire de haute qualité avec des couronnes et bridges durables pour retrouver votre sourire.',
+    'services.implants.title': 'Implantologie',
+    'services.implants.desc': 'Implants dentaires pour remplacer les dents manquantes avec des solutions permanentes et naturelles.',
+    'services.dentures.title': 'Prothèse Dentaire',
+    'services.dentures.desc': 'Prothèses dentaires personnalisées, partielles ou complètes, pour restaurer votre fonction masticatoire.',
+    'services.orthodontics.title': 'Orthodontie',
+    'services.orthodontics.desc': 'Alignement dentaire avec Invisalign et appareils orthodontiques pour tous les âges à Casablanca.',
+    'services.pediatric.title': 'Pédodontie',
+    'services.pediatric.desc': 'Soins dentaires pédiatriques spécialisés pour les enfants dans un environnement rassurant.',
+    'services.gum.title': 'Parodontologie',
+    'services.gum.desc': 'Traitement et prévention des maladies des gencives pour une santé bucco-dentaire optimale.',
+    'services.general.title': 'Soins Généraux',
+    'services.general.desc': 'Examens, détartrage, soins des caries dentaires, traitement des canaux et urgences dentaires.',
+    
+    // About
+    'about.title': 'Dr. Firdaous MOUSTAINE',
+    'about.subtitle': 'Dentiste experte à Casablanca',
+    'about.experience': 'Années d\'expérience',
+    'about.patients': 'Patients traités',
+    'about.rating': 'Note Google',
+    'about.satisfaction': 'Satisfaction',
+    
+    // Footer
+    'footer.address': 'Cabinet Dentaire Dr. Firdaous MOUSTAINE, Casablanca, Maroc',
+    'footer.phone': 'Téléphone',
+    'footer.email': 'Email',
+    'footer.hours': 'Horaires',
+    'footer.hours.mon-fri': 'Lun-Ven: 9h00 - 18h00',
+    'footer.hours.sat': 'Sam: 9h00 - 13h00',
+    'footer.copyright': '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. Tous droits réservés.',
+    
+    // Contact
+    'contact.title': 'Contactez-nous',
+    'contact.subtitle': 'Prenez rendez-vous ou posez vos questions',
+    'contact.form.name': 'Nom complet',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Téléphone',
+    'contact.form.date': 'Date souhaitée (optionnelle)',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Envoyer',
+    'contact.form.sending': 'Envoi en cours...',
+    'contact.whatsapp.message': 'Bonjour, je souhaiterais prendre rendez-vous...',
+  },
+  
+  ar: {
+    // Navigation
+    'nav.home': 'الرئيسية',
+    'nav.services': 'الخدمات',
+    'nav.about': 'من نحن',
+    'nav.testimonials': 'آراء المرضى',
+    'nav.faq': 'الأسئلة الشائعة',
+    'nav.blog': 'المدونة',
+    'nav.contact': 'اتصل بنا',
+    
+    // CTA Buttons
+    'cta.book': 'احجز موعد',
+    'cta.call': 'اتصل',
+    'cta.whatsapp': 'واتساب',
+    'cta.readMore': 'اقرأ المزيد',
+    'cta.backToServices': 'العودة إلى الخدمات',
+    'cta.viewAll': 'عرض جميع الآراء',
+    
+    // Hero Section
+    'hero.title': 'ابتسامتك، أولويتنا',
+    'hero.subtitle': 'عيادة أسنان حديثة في الدار البيضاء',
+    'hero.description': 'اكتشف رعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في بيئة حديثة ودافئة.',
+    'hero.cta.primary': 'احجز موعد',
+    'hero.cta.secondary': 'خدماتنا',
+    'hero.rating': '٤.٨★ على جوجل | أكثر من ٢٥٠ مراجعة',
+    
+    // Services
+    'services.title': 'خدماتنا',
+    'services.subtitle': 'رعاية أسنان شاملة لجميع أفراد الأسرة',
+    'services.whitening.title': 'تبييض الأسنان',
+    'services.whitening.desc': 'ابتسامة مشرقة بفضل تقنيات التبييض الاحترافية الآمنة والفعالة في الدار البيضاء.',
+    'services.crowns.title': 'التيجان والجسور',
+    'services.crowns.desc': 'ترميم الأسنان عالي الجودة بتيجان وجسور متينة لاستعادة ابتسامتك.',
+    'services.implants.title': 'زراعة الأسنان',
+    'services.implants.desc': 'غرسات الأسنان لتعويض الأسنان المفقودة بحلول دائمة وطبيعية.',
+    'services.dentures.title': 'أطقم الأسنان',
+    'services.dentures.desc': 'أطقم أسنان مخصصة، جزئية أو كاملة، لاستعادة وظيفة المضغ.',
+    'services.orthodontics.title': 'تقويم الأسنان',
+    'services.orthodontics.desc': 'محاذاة الأسنان بتقنية إنفزلاين والأجهزة التقويمية لجميع الأعمار في الدار البيضاء.',
+    'services.pediatric.title': 'طب أسنان الأطفال',
+    'services.pediatric.desc': 'رعاية أسنان متخصصة للأطفال في بيئة مطمئنة.',
+    'services.gum.title': 'علاج اللثة',
+    'services.gum.desc': 'علاج والوقاية من أمراض اللثة لصحة فموية مثالية.',
+    'services.general.title': 'العناية العامة',
+    'services.general.desc': 'فحوصات، تنظيف الأسنان، علاج التسوس، علاج الجذور والحالات الطارئة.',
+    
+    // About
+    'about.title': 'د. فردوس مستين',
+    'about.subtitle': 'طبيبة أسنان خبيرة في الدار البيضاء',
+    'about.experience': 'سنوات الخبرة',
+    'about.patients': 'المرضى المعالجون',
+    'about.rating': 'تقييم جوجل',
+    'about.satisfaction': 'الرضا',
+    
+    // Footer
+    'footer.address': 'عيادة د. فردوس مستين، الدار البيضاء، المغرب',
+    'footer.phone': 'الهاتف',
+    'footer.email': 'البريد الإلكتروني',
+    'footer.hours': 'ساعات العمل',
+    'footer.hours.mon-fri': 'الإثنين-الجمعة: ٩:٠٠ - ١٨:٠٠',
+    'footer.hours.sat': 'السبت: ٩:٠٠ - ١٣:٠٠',
+    'footer.copyright': '© ٢٠٢٥ عيادة د. فردوس مستين. جميع الحقوق محفوظة.',
+    
+    // Contact
+    'contact.title': 'اتصل بنا',
+    'contact.subtitle': 'احجز موعد أو اطرح أسئلتك',
+    'contact.form.name': 'الاسم الكامل',
+    'contact.form.email': 'البريد الإلكتروني',
+    'contact.form.phone': 'رقم الهاتف',
+    'contact.form.date': 'التاريخ المفضل (اختياري)',
+    'contact.form.message': 'الرسالة',
+    'contact.form.submit': 'إرسال',
+    'contact.form.sending': 'جاري الإرسال...',
+    'contact.whatsapp.message': 'مرحبا، أود حجز موعد...',
+  },
+  
+  en: {
+    // Navigation
+    'nav.home': 'Home',
+    'nav.services': 'Services',
+    'nav.about': 'About',
+    'nav.testimonials': 'Testimonials',
+    'nav.faq': 'FAQ',
+    'nav.blog': 'Blog',
+    'nav.contact': 'Contact',
+    
+    // CTA Buttons
+    'cta.book': 'Book Appointment',
+    'cta.call': 'Call',
+    'cta.whatsapp': 'WhatsApp',
+    'cta.readMore': 'Read More',
+    'cta.backToServices': 'Back to Services',
+    'cta.viewAll': 'View All Reviews',
+    
+    // Hero Section
+    'hero.title': 'Your smile, our priority',
+    'hero.subtitle': 'Modern Dental Clinic in Casablanca',
+    'hero.description': 'Discover exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern and warm environment.',
+    'hero.cta.primary': 'Book Appointment',
+    'hero.cta.secondary': 'Our Services',
+    'hero.rating': '4.8★ on Google | 250+ patient reviews',
+    
+    // Services
+    'services.title': 'Our Services',
+    'services.subtitle': 'Comprehensive dental care for the whole family',
+    'services.whitening.title': 'Teeth Whitening',
+    'services.whitening.desc': 'A bright smile with our safe and effective professional teeth whitening techniques in Casablanca.',
+    'services.crowns.title': 'Crowns & Bridges',
+    'services.crowns.desc': 'High-quality dental restoration with durable crowns and bridges to restore your smile.',
+    'services.implants.title': 'Dental Implants',
+    'services.implants.desc': 'Dental implants to replace missing teeth with permanent and natural solutions.',
+    'services.dentures.title': 'Dentures',
+    'services.dentures.desc': 'Custom dentures, partial or complete, to restore your chewing function.',
+    'services.orthodontics.title': 'Orthodontics',
+    'services.orthodontics.desc': 'Teeth alignment with Invisalign and orthodontic appliances for all ages in Casablanca.',
+    'services.pediatric.title': 'Pediatric Dentistry',
+    'services.pediatric.desc': 'Specialized pediatric dental care for children in a reassuring environment.',
+    'services.gum.title': 'Gum Treatment',
+    'services.gum.desc': 'Treatment and prevention of gum diseases for optimal oral health.',
+    'services.general.title': 'General Dentistry',
+    'services.general.desc': 'Examinations, cleaning, cavity treatment, root canal therapy and dental emergencies.',
+    
+    // About
+    'about.title': 'Dr. Firdaous MOUSTAINE',
+    'about.subtitle': 'Expert Dentist in Casablanca',
+    'about.experience': 'Years of Experience',
+    'about.patients': 'Patients Treated',
+    'about.rating': 'Google Rating',
+    'about.satisfaction': 'Satisfaction',
+    
+    // Footer
+    'footer.address': 'Cabinet Dentaire Dr. Firdaous MOUSTAINE, Casablanca, Morocco',
+    'footer.phone': 'Phone',
+    'footer.email': 'Email',
+    'footer.hours': 'Office Hours',
+    'footer.hours.mon-fri': 'Mon-Fri: 9:00 AM - 6:00 PM',
+    'footer.hours.sat': 'Sat: 9:00 AM - 1:00 PM',
+    'footer.copyright': '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. All rights reserved.',
+    
+    // Contact
+    'contact.title': 'Contact Us',
+    'contact.subtitle': 'Book an appointment or ask your questions',
+    'contact.form.name': 'Full Name',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Phone',
+    'contact.form.date': 'Preferred Date (optional)',
+    'contact.form.message': 'Message',
+    'contact.form.submit': 'Send',
+    'contact.form.sending': 'Sending...',
+    'contact.whatsapp.message': 'Hello, I would like to book an appointment...',
+  },
+};
