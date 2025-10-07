@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Link } from 'wouter';
-import heroImage from '@assets/generated_images/Modern_dental_clinic_reception_87f8af6e.png';
+import heroImage from '@assets/dentistback_1759836434776.jpg';
 
 export default function Hero() {
   const { t } = useLanguage();
