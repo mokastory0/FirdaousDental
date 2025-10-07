@@ -176,7 +176,7 @@ export default function HomePage() {
       equipmentFeature4: '✓ Équipements ergonomiques pour votre confort',
       learnMore: 'En savoir plus',
       testimonialsTitle: 'Ce que disent nos patients',
-      testimonialsSubtitle: '4.8★ sur Google avec plus de 250 avis patients',
+      testimonialsSubtitle: '5.0★ sur Google avec plus de 250 avis patients',
       viewAllTestimonials: 'Voir tous les avis',
       ctaTitle: 'Prêt à prendre soin de votre sourire ?',
       ctaSubtitle: 'Prenez rendez-vous dès aujourd\'hui et découvrez l\'excellence des soins dentaires à Casablanca',
@@ -192,7 +192,7 @@ export default function HomePage() {
       equipmentFeature4: '✓ معدات مريحة لراحتك',
       learnMore: 'اعرف المزيد',
       testimonialsTitle: 'ماذا يقول مرضانا',
-      testimonialsSubtitle: '٤٫٨★ على جوجل مع أكثر من ٢٥٠ تقييم',
+      testimonialsSubtitle: '٥٫٠★ على جوجل مع أكثر من ٢٥٠ تقييم',
       viewAllTestimonials: 'عرض جميع التقييمات',
       ctaTitle: 'جاهز للعناية بابتسامتك؟',
       ctaSubtitle: 'احجز موعدًا اليوم واكتشف التميز في العناية بالأسنان بالدار البيضاء',
@@ -208,7 +208,7 @@ export default function HomePage() {
       equipmentFeature4: '✓ Ergonomic equipment for your comfort',
       learnMore: 'Learn more',
       testimonialsTitle: 'What our patients say',
-      testimonialsSubtitle: '4.8★ on Google with over 250 patient reviews',
+      testimonialsSubtitle: '5.0★ on Google with over 250 patient reviews',
       viewAllTestimonials: 'View all reviews',
       ctaTitle: 'Ready to take care of your smile?',
       ctaSubtitle: 'Book an appointment today and discover excellence in dental care in Casablanca',
@@ -221,34 +221,34 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: 'Fatima Zahra',
+      name: language === 'fr' ? 'Mohamed AMAR' : language === 'ar' ? 'محمد عمر' : 'Mohamed AMAR',
       rating: 5,
       text: language === 'fr' 
-        ? 'Excellent service! Dr. Moustaine est très professionnelle et attentionnée. Je recommande vivement pour le blanchiment dentaire.'
+        ? 'Détartrage sans douleur. Première fois dans ma vie ou je reçois un détartrage sans douleur. Dr Firdaouise a appliqué le détartrage et soins sans douleur et dans le comfort. Recommende vivement.'
         : language === 'ar'
-        ? 'خدمة ممتازة! الدكتورة مستين محترفة جداً ومهتمة. أوصي بشدة بتبييض الأسنان.'
-        : 'Excellent service! Dr. Moustaine is very professional and caring. Highly recommend for teeth whitening.',
-      service: language === 'fr' ? 'Blanchiment dentaire' : language === 'ar' ? 'تبييض الأسنان' : 'Teeth Whitening',
+        ? 'إزالة الجير بدون ألم. المرة الأولى في حياتي التي أتلقى فيها إزالة الجير بدون ألم. طبقت الدكتورة فردوس إزالة الجير والعناية بدون ألم وبراحة تامة. أوصي بشدة.'
+        : 'Painless scaling. First time in my life I received painless scaling. Dr. Firdaous applied scaling and care without pain and in comfort. Highly recommend.',
+      service: language === 'fr' ? 'Détartrage' : language === 'ar' ? 'إزالة الجير' : 'Dental Scaling',
     },
     {
-      name: 'Ahmed El Mansouri',
+      name: 'Ihab Eddine',
       rating: 5,
       text: language === 'fr'
-        ? 'Une équipe formidable et un cabinet moderne. Mon implant dentaire a été un succès total. Merci!'
+        ? 'Je tiens à remercier et recommander vivement Dr. Ferdaous. Elle est très professionnelle, attentionnée et met immédiatement à l\'aise. C\'est une dentiste passionnée qui prend vraiment le temps pour ses patients.'
         : language === 'ar'
-        ? 'فريق رائع وعيادة حديثة. كانت زراعة أسناني ناجحة تماماً. شكراً!'
-        : 'A great team and a modern clinic. My dental implant was a total success. Thank you!',
-      service: language === 'fr' ? 'Implantologie' : language === 'ar' ? 'زراعة الأسنان' : 'Dental Implants',
+        ? 'أود أن أشكر وأوصي بشدة بالدكتورة فردوس. إنها محترفة جداً، مهتمة، وتجعلك تشعر بالراحة على الفور. إنها طبيبة أسنان شغوفة تأخذ الوقت حقاً لمرضاها.'
+        : 'I would like to thank and highly recommend Dr. Ferdaous. She is very professional, attentive, and immediately puts you at ease. She is a passionate dentist who truly takes the time for her patients.',
+      service: language === 'fr' ? 'Soins généraux' : language === 'ar' ? 'العناية العامة' : 'General Care',
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Sharon Taylor',
       rating: 5,
       text: language === 'fr'
-        ? 'Excellente expérience! Personnel professionnel et équipement moderne. Je recommande vivement cette clinique dentaire à Casablanca.'
+        ? 'Excellente dentiste. Parle anglais. Soins sans douleur pour ma carie dentaire.'
         : language === 'ar'
-        ? 'تجربة رائعة! طاقم محترف ومعدات حديثة. أوصي بشدة بهذه العيادة السنية في الدار البيضاء.'
-        : 'Great experience! Professional staff and modern equipment. Highly recommend this dental clinic in Casablanca.',
-      service: language === 'fr' ? 'Soins généraux' : language === 'ar' ? 'العناية العامة' : 'General Dentistry',
+        ? 'طبيبة أسنان ممتازة. تتحدث الإنجليزية. رعاية بدون ألم لتسوس أسناني.'
+        : 'Great Dentist. Can speak English. Painless care for my tooth decay.',
+      service: language === 'fr' ? 'Traitement de carie' : language === 'ar' ? 'علاج التسوس' : 'Cavity Treatment',
     },
   ];
 
