@@ -359,7 +359,7 @@ export default function HomePage() {
               className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
               data-testid="button-call-footer"
             >
-              +212 665 477 745
+              <span dir="ltr">+212 665 477 745</span>
             </Button>
           </div>
         </div>
