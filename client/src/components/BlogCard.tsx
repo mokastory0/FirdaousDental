@@ -3,6 +3,7 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 
 interface BlogCardProps {
   id: string;
@@ -15,6 +16,8 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ id, title, excerpt, category, date, readTime, image }: BlogCardProps) {
+  const { localizePath } = useLocalizedPath();
+
   return (
     <Card className="overflow-hidden hover-elevate transition-all h-full flex flex-col" data-testid={`card-blog-${id}`}>
       {image && (
@@ -45,7 +48,7 @@ export default function BlogCard({ id, title, excerpt, category, date, readTime,
               {readTime}
             </div>
           </div>
-          <Link href={`/blog/${id}`}>
+          <Link href={localizePath(`blog/${id}`)}>
             <Button variant="ghost" size="sm" className="p-0 h-auto hover-elevate" data-testid={`link-blog-${id}`}>
               Lire
               <ArrowRight className="ml-1 h-3 w-3" />

@@ -2,11 +2,13 @@ import { Link, useRoute } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, Calendar, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { blogArticles } from '@/data/blogArticles';
 
 export default function BlogArticlePage() {
   const { language } = useLanguage();
-  const [, params] = useRoute('/blog/:id');
+  const { localizePath } = useLocalizedPath();
+  const [, params] = useRoute('/:lang/blog/:id');
   const articleId = params?.id;
 
   const article = articleId && blogArticles[articleId] ? blogArticles[articleId][language] : null;
@@ -18,7 +20,7 @@ export default function BlogArticlePage() {
           <h1 className="text-4xl font-bold mb-4">
             {language === 'ar' ? 'المقال غير موجود' : language === 'fr' ? 'Article non trouvé' : 'Article not found'}
           </h1>
-          <Link href="/blog">
+          <Link href={localizePath('blog')}>
             <Button>
               {language === 'ar' ? 'العودة للمدونة' : language === 'fr' ? 'Retour au blog' : 'Back to blog'}
             </Button>
@@ -31,7 +33,7 @@ export default function BlogArticlePage() {
   return (
     <div className="py-16 md:py-24">
       <div className="container mx-auto px-4 max-w-4xl">
-        <Link href="/blog">
+        <Link href={localizePath('blog')}>
           <Button variant="ghost" className="mb-6 gap-2" data-testid="link-back-blog">
             <ChevronLeft className="h-4 w-4" />
             {language === 'ar' ? 'العودة للمدونة' : language === 'fr' ? 'Retour au blog' : 'Back to blog'}
@@ -72,7 +74,7 @@ export default function BlogArticlePage() {
                 ? 'Vous avez des questions sur votre santé dentaire ? Prenez rendez-vous pour une consultation avec Dr. Firdaous MOUSTAINE.'
                 : 'Have questions about your dental health? Book an appointment for a consultation with Dr. Firdaous MOUSTAINE.'}
             </p>
-            <Link href="/contact">
+            <Link href={localizePath('contact')}>
               <Button size="lg" data-testid="button-book-consultation">
                 {language === 'ar' ? 'احجز موعد' : language === 'fr' ? 'Prendre Rendez-vous' : 'Book Appointment'}
               </Button>

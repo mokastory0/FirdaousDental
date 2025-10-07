@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
+import { useLocation } from 'wouter';
 import { translations, Language } from '@/data/translations';
 
 interface LanguageContextType {
@@ -11,6 +12,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [location, setLocation] = useLocation();
   const [language, setLanguageState] = useState<Language>('fr');
 
   const setLanguage = (lang: Language) => {
@@ -18,14 +20,37 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     localStorage.setItem('language', lang);
+
+    // Update URL to include language prefix
+    const currentPath = location.replace(/^\/(en|ar|fr)/, '') || '/';
+    setLocation(`/${lang}${currentPath}`);
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem('language') as Language | null;
-    if (saved && ['fr', 'ar', 'en'].includes(saved)) {
-      setLanguage(saved);
+    // Extract language from URL
+    const pathParts = location.split('/').filter(Boolean);
+    const urlLang = pathParts[0];
+    
+    if (urlLang && ['fr', 'ar', 'en'].includes(urlLang)) {
+      // Valid language in URL - always sync state, document, and localStorage
+      const newLang = urlLang as Language;
+      setLanguageState(newLang);
+      document.documentElement.lang = newLang;
+      document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
+      localStorage.setItem('language', newLang);
+    } else {
+      // No valid language in URL, redirect to saved or default language
+      const saved = localStorage.getItem('language') as Language | null;
+      const defaultLang = (saved && ['fr', 'ar', 'en'].includes(saved)) ? saved : 'fr';
+      
+      // Strip invalid locale prefix if present
+      const cleanPath = urlLang && !['fr', 'ar', 'en'].includes(urlLang)
+        ? '/' + pathParts.slice(1).join('/')
+        : location || '/';
+      
+      setLocation(`/${defaultLang}${cleanPath === '/' ? '' : cleanPath}`);
     }
-  }, []);
+  }, [location]);
 
   const t = (key: string): string => {
     const langTranslations = translations[language] as Record<string, string>;

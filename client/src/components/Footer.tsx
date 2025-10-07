@@ -1,28 +1,30 @@
 import { Link } from 'wouter';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 
 export default function Footer() {
   const { language, t } = useLanguage();
+  const { localizePath } = useLocalizedPath();
 
   const services = {
     fr: [
-      { href: '/services/whitening', label: 'Blanchiment Dentaire' },
-      { href: '/services/implants', label: 'Implantologie' },
-      { href: '/services/orthodontics', label: 'Orthodontie' },
-      { href: '/services/pediatric', label: 'Pédodontie' },
+      { href: 'services/whitening', label: 'Blanchiment Dentaire' },
+      { href: 'services/implants', label: 'Implantologie' },
+      { href: 'services/orthodontics', label: 'Orthodontie' },
+      { href: 'services/pediatric', label: 'Pédodontie' },
     ],
     ar: [
-      { href: '/services/whitening', label: 'تبييض الأسنان' },
-      { href: '/services/implants', label: 'زراعة الأسنان' },
-      { href: '/services/orthodontics', label: 'تقويم الأسنان' },
-      { href: '/services/pediatric', label: 'طب أسنان الأطفال' },
+      { href: 'services/whitening', label: 'تبييض الأسنان' },
+      { href: 'services/implants', label: 'زراعة الأسنان' },
+      { href: 'services/orthodontics', label: 'تقويم الأسنان' },
+      { href: 'services/pediatric', label: 'طب أسنان الأطفال' },
     ],
     en: [
-      { href: '/services/whitening', label: 'Teeth Whitening' },
-      { href: '/services/implants', label: 'Dental Implants' },
-      { href: '/services/orthodontics', label: 'Orthodontics' },
-      { href: '/services/pediatric', label: 'Pediatric Dentistry' },
+      { href: 'services/whitening', label: 'Teeth Whitening' },
+      { href: 'services/implants', label: 'Dental Implants' },
+      { href: 'services/orthodontics', label: 'Orthodontics' },
+      { href: 'services/pediatric', label: 'Pediatric Dentistry' },
     ],
   };
 
@@ -60,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               {services[language].map((service) => (
                 <li key={service.href}>
-                  <Link href={service.href} className="hover:text-primary transition-colors">
+                  <Link href={localizePath(service.href)} className="hover:text-primary transition-colors">
                     {service.label}
                   </Link>
                 </li>

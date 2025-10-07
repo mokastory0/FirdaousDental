@@ -5,10 +5,12 @@ import TestimonialCard from '@/components/TestimonialCard';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Crown, Anchor, Smile, Braces, Baby, Heart, Stethoscope, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import equipmentImage from '@assets/generated_images/Modern_dental_equipment_technology_344d1782.png';
 
 export default function HomePage() {
   const { language, t } = useLanguage();
+  const { localizePath } = useLocalizedPath();
 
   const servicesData = {
     fr: [
@@ -16,49 +18,49 @@ export default function HomePage() {
         icon: Sparkles,
         title: 'Blanchiment Dentaire',
         description: 'Un sourire éclatant grâce à nos techniques professionnelles de blanchiment dentaire sûres et efficaces à Casablanca.',
-        href: '/services/whitening',
+        href: 'services/whitening',
       },
       {
         icon: Crown,
         title: 'Couronne et Bridge',
         description: 'Restauration dentaire de haute qualité avec des couronnes et bridges durables pour retrouver votre sourire.',
-        href: '/services/crowns',
+        href: 'services/crowns',
       },
       {
         icon: Anchor,
         title: 'Implantologie',
         description: 'Implants dentaires pour remplacer les dents manquantes avec des solutions permanentes et naturelles.',
-        href: '/services/implants',
+        href: 'services/implants',
       },
       {
         icon: Smile,
         title: 'Prothèse Dentaire',
         description: 'Prothèses dentaires personnalisées, partielles ou complètes, pour restaurer votre fonction masticatoire.',
-        href: '/services/dentures',
+        href: 'services/dentures',
       },
       {
         icon: Braces,
         title: 'Orthodontie',
         description: 'Alignement dentaire avec Invisalign et appareils orthodontiques pour tous les âges à Casablanca.',
-        href: '/services/orthodontics',
+        href: 'services/orthodontics',
       },
       {
         icon: Baby,
         title: 'Pédodontie',
         description: 'Soins dentaires pédiatriques spécialisés pour les enfants dans un environnement rassurant.',
-        href: '/services/pediatric',
+        href: 'services/pediatric',
       },
       {
         icon: Heart,
         title: 'Parodontologie',
         description: 'Traitement et prévention des maladies des gencives pour une santé bucco-dentaire optimale.',
-        href: '/services/gum',
+        href: 'services/gum',
       },
       {
         icon: Stethoscope,
         title: 'Soins Généraux',
         description: 'Examens, détartrage, soins des caries dentaires, traitement des canaux et urgences dentaires.',
-        href: '/services/general',
+        href: 'services/general',
       },
     ],
     ar: [
@@ -66,49 +68,49 @@ export default function HomePage() {
         icon: Sparkles,
         title: 'تبييض الأسنان',
         description: 'ابتسامة مشرقة بفضل تقنياتنا المهنية لتبييض الأسنان الآمنة والفعالة في الدار البيضاء.',
-        href: '/services/whitening',
+        href: 'services/whitening',
       },
       {
         icon: Crown,
         title: 'التيجان والجسور',
         description: 'ترميم أسنان عالي الجودة بتيجان وجسور متينة لاستعادة ابتسامتك.',
-        href: '/services/crowns',
+        href: 'services/crowns',
       },
       {
         icon: Anchor,
         title: 'زراعة الأسنان',
         description: 'غرسات أسنان لتعويض الأسنان المفقودة بحلول دائمة وطبيعية.',
-        href: '/services/implants',
+        href: 'services/implants',
       },
       {
         icon: Smile,
         title: 'أطقم الأسنان',
         description: 'أطقم أسنان مخصصة، جزئية أو كاملة، لاستعادة وظيفة المضغ.',
-        href: '/services/dentures',
+        href: 'services/dentures',
       },
       {
         icon: Braces,
         title: 'تقويم الأسنان',
         description: 'محاذاة الأسنان مع Invisalign وأجهزة تقويم لجميع الأعمار في الدار البيضاء.',
-        href: '/services/orthodontics',
+        href: 'services/orthodontics',
       },
       {
         icon: Baby,
         title: 'طب أسنان الأطفال',
         description: 'رعاية أسنان أطفال متخصصة في بيئة مريحة.',
-        href: '/services/pediatric',
+        href: 'services/pediatric',
       },
       {
         icon: Heart,
         title: 'أمراض اللثة',
         description: 'علاج والوقاية من أمراض اللثة لصحة فموية مثلى.',
-        href: '/services/gum',
+        href: 'services/gum',
       },
       {
         icon: Stethoscope,
         title: 'العناية العامة',
         description: 'فحوصات، إزالة الجير، علاج التسوس، علاج القنوات وطوارئ الأسنان.',
-        href: '/services/general',
+        href: 'services/general',
       },
     ],
     en: [
@@ -116,49 +118,49 @@ export default function HomePage() {
         icon: Sparkles,
         title: 'Teeth Whitening',
         description: 'A bright smile thanks to our safe and effective professional teeth whitening techniques in Casablanca.',
-        href: '/services/whitening',
+        href: 'services/whitening',
       },
       {
         icon: Crown,
         title: 'Crowns and Bridges',
         description: 'High-quality dental restoration with durable crowns and bridges to restore your smile.',
-        href: '/services/crowns',
+        href: 'services/crowns',
       },
       {
         icon: Anchor,
         title: 'Dental Implants',
         description: 'Dental implants to replace missing teeth with permanent and natural solutions.',
-        href: '/services/implants',
+        href: 'services/implants',
       },
       {
         icon: Smile,
         title: 'Dental Dentures',
         description: 'Custom partial or complete dental dentures to restore your chewing function.',
-        href: '/services/dentures',
+        href: 'services/dentures',
       },
       {
         icon: Braces,
         title: 'Orthodontics',
         description: 'Dental alignment with Invisalign and orthodontic appliances for all ages in Casablanca.',
-        href: '/services/orthodontics',
+        href: 'services/orthodontics',
       },
       {
         icon: Baby,
         title: 'Pediatric Dentistry',
         description: 'Specialized pediatric dental care for children in a reassuring environment.',
-        href: '/services/pediatric',
+        href: 'services/pediatric',
       },
       {
         icon: Heart,
         title: 'Periodontics',
         description: 'Treatment and prevention of gum diseases for optimal oral health.',
-        href: '/services/gum',
+        href: 'services/gum',
       },
       {
         icon: Stethoscope,
         title: 'General Care',
         description: 'Examinations, scaling, cavity care, root canal treatment and dental emergencies.',
-        href: '/services/general',
+        href: 'services/general',
       },
     ],
   };
@@ -270,7 +272,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="/services">
+            <Link href={localizePath('services')}>
               <Button size="lg" variant="outline" className="gap-2" data-testid="link-all-services">
                 {content.viewAllServices}
                 <ArrowRight className="h-4 w-4" />
@@ -296,7 +298,7 @@ export default function HomePage() {
                   <li>{content.equipmentFeature4}</li>
                 </ul>
               </div>
-              <Link href="/about">
+              <Link href={localizePath('about')}>
                 <Button size="lg" className="mt-6" data-testid="link-about-equipment">
                   {content.learnMore}
                 </Button>
@@ -329,7 +331,7 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="/testimonials">
+            <Link href={localizePath('testimonials')}>
               <Button size="lg" variant="outline" className="gap-2" data-testid="link-all-testimonials">
                 {content.viewAllTestimonials}
                 <ArrowRight className="h-4 w-4" />
@@ -348,7 +350,7 @@ export default function HomePage() {
             {content.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact">
+            <Link href={localizePath('contact')}>
               <Button size="lg" variant="secondary" className="text-lg px-8" data-testid="button-book-footer">
                 {content.ctaButton}
               </Button>

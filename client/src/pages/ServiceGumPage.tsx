@@ -5,10 +5,12 @@ import { ChevronLeft, Heart } from 'lucide-react';
 import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import gumImage from '@assets/stock_images/gum_disease_treatmen_60d08cb9.jpg';
 
 export default function ServiceGumPage() {
   const { language, t } = useLanguage();
+  const { localizePath } = useLocalizedPath();
 
   const content = {
     fr: {
@@ -123,7 +125,7 @@ export default function ServiceGumPage() {
   return (
     <div className="py-16 md:py-24">
       <div className="container mx-auto px-4 max-w-5xl">
-        <Link href="/services">
+        <Link href={localizePath('services')}>
           <Button variant="ghost" className="mb-6 gap-2" data-testid="link-back-services">
             <ChevronLeft className="h-4 w-4" />
             {t('cta.backToServices')}
@@ -208,7 +210,7 @@ export default function ServiceGumPage() {
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-4">{c.ctaTitle}</h2>
               <p className="text-lg mb-8 opacity-90">{c.ctaText}</p>
-              <Link href="/contact">
+              <Link href={localizePath('contact')}>
                 <Button size="lg" variant="secondary" className="text-lg" data-testid="button-book-gum">
                   {c.ctaButton}
                 </Button>

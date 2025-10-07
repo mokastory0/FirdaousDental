@@ -29,22 +29,28 @@ import NotFound from "@/pages/not-found";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="/services" component={ServicesPage} />
-      <Route path="/services/whitening" component={ServiceWhiteningPage} />
-      <Route path="/services/pediatric" component={ServicePediatricPage} />
-      <Route path="/services/crowns" component={ServiceCrownsPage} />
-      <Route path="/services/implants" component={ServiceImplantsPage} />
-      <Route path="/services/dentures" component={ServiceDenturesPage} />
-      <Route path="/services/orthodontics" component={ServiceOrthodonticsPage} />
-      <Route path="/services/gum" component={ServiceGumPage} />
-      <Route path="/services/general" component={ServiceGeneralPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/testimonials" component={TestimonialsPage} />
-      <Route path="/faq" component={FAQPage} />
-      <Route path="/blog" component={BlogPage} />
-      <Route path="/blog/:id" component={BlogArticlePage} />
-      <Route path="/contact" component={ContactPage} />
+      {/* Root redirect - handled by LanguageContext */}
+      <Route path="/">
+        {() => <div />}
+      </Route>
+      
+      {/* Language-prefixed routes */}
+      <Route path="/:lang" component={HomePage} />
+      <Route path="/:lang/services" component={ServicesPage} />
+      <Route path="/:lang/services/whitening" component={ServiceWhiteningPage} />
+      <Route path="/:lang/services/pediatric" component={ServicePediatricPage} />
+      <Route path="/:lang/services/crowns" component={ServiceCrownsPage} />
+      <Route path="/:lang/services/implants" component={ServiceImplantsPage} />
+      <Route path="/:lang/services/dentures" component={ServiceDenturesPage} />
+      <Route path="/:lang/services/orthodontics" component={ServiceOrthodonticsPage} />
+      <Route path="/:lang/services/gum" component={ServiceGumPage} />
+      <Route path="/:lang/services/general" component={ServiceGeneralPage} />
+      <Route path="/:lang/about" component={AboutPage} />
+      <Route path="/:lang/testimonials" component={TestimonialsPage} />
+      <Route path="/:lang/faq" component={FAQPage} />
+      <Route path="/:lang/blog" component={BlogPage} />
+      <Route path="/:lang/blog/:id" component={BlogArticlePage} />
+      <Route path="/:lang/contact" component={ContactPage} />
       <Route component={NotFound} />
     </Switch>
   );

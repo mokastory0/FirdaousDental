@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { Link } from 'wouter';
 import heroImage from '@assets/dentistback_1759836434776.jpg';
 
 export default function Hero() {
   const { t } = useLanguage();
+  const { localizePath } = useLocalizedPath();
 
   return (
     <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden">
@@ -27,12 +29,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Link href="/contact">
+          <Link href={localizePath('contact')}>
             <Button size="lg" className="text-lg px-8" data-testid="button-cta-primary">
               {t('hero.cta.primary')}
             </Button>
           </Link>
-          <Link href="/services">
+          <Link href={localizePath('services')}>
             <Button
               size="lg"
               variant="outline"
