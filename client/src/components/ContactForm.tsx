@@ -14,21 +14,85 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { Send } from 'lucide-react';
-
-const formSchema = z.object({
-  name: z.string().min(2, 'Le nom doit contenir au moins 2 caractères'),
-  email: z.string().email('Email invalide'),
-  phone: z.string().min(10, 'Numéro de téléphone invalide'),
-  date: z.string().optional(),
-  message: z.string().min(10, 'Le message doit contenir au moins 10 caractères'),
-});
-
-type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const { language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const content = {
+    fr: {
+      nameLabel: 'Nom complet',
+      namePlaceholder: 'Votre nom',
+      nameError: 'Le nom doit contenir au moins 2 caractères',
+      emailLabel: 'Email',
+      emailPlaceholder: 'votre@email.com',
+      emailError: 'Email invalide',
+      phoneLabel: 'Téléphone',
+      phonePlaceholder: '+212 6XX-XXXXXX',
+      phoneError: 'Numéro de téléphone invalide',
+      dateLabel: 'Date souhaitée (optionnelle)',
+      messageLabel: 'Message',
+      messagePlaceholder: 'Décrivez brièvement la raison de votre rendez-vous...',
+      messageError: 'Le message doit contenir au moins 10 caractères',
+      submitButton: 'Envoyer',
+      submittingButton: 'Envoi en cours...',
+      successTitle: 'Message envoyé !',
+      successDescription: 'Nous vous contacterons bientôt pour confirmer votre rendez-vous.',
+    },
+    ar: {
+      nameLabel: 'الاسم الكامل',
+      namePlaceholder: 'اسمك',
+      nameError: 'يجب أن يحتوي الاسم على حرفين على الأقل',
+      emailLabel: 'البريد الإلكتروني',
+      emailPlaceholder: 'your@email.com',
+      emailError: 'بريد إلكتروني غير صالح',
+      phoneLabel: 'الهاتف',
+      phonePlaceholder: '+212 6XX-XXXXXX',
+      phoneError: 'رقم هاتف غير صالح',
+      dateLabel: 'التاريخ المطلوب (اختياري)',
+      messageLabel: 'الرسالة',
+      messagePlaceholder: 'اشرح بإيجاز سبب موعدك...',
+      messageError: 'يجب أن تحتوي الرسالة على 10 أحرف على الأقل',
+      submitButton: 'إرسال',
+      submittingButton: 'جاري الإرسال...',
+      successTitle: 'تم إرسال الرسالة!',
+      successDescription: 'سنتصل بك قريبًا لتأكيد موعدك.',
+    },
+    en: {
+      nameLabel: 'Full name',
+      namePlaceholder: 'Your name',
+      nameError: 'Name must contain at least 2 characters',
+      emailLabel: 'Email',
+      emailPlaceholder: 'your@email.com',
+      emailError: 'Invalid email',
+      phoneLabel: 'Phone',
+      phonePlaceholder: '+212 6XX-XXXXXX',
+      phoneError: 'Invalid phone number',
+      dateLabel: 'Preferred date (optional)',
+      messageLabel: 'Message',
+      messagePlaceholder: 'Briefly describe the reason for your appointment...',
+      messageError: 'Message must contain at least 10 characters',
+      submitButton: 'Send',
+      submittingButton: 'Sending...',
+      successTitle: 'Message sent!',
+      successDescription: 'We will contact you soon to confirm your appointment.',
+    },
+  };
+
+  const c = content[language];
+
+  const formSchema = z.object({
+    name: z.string().min(2, c.nameError),
+    email: z.string().email(c.emailError),
+    phone: z.string().min(10, c.phoneError),
+    date: z.string().optional(),
+    message: z.string().min(10, c.messageError),
+  });
+
+  type FormData = z.infer<typeof formSchema>;
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -45,12 +109,11 @@ export default function ContactForm() {
     setIsSubmitting(true);
     console.log('Form submitted:', data);
     
-    // todo: remove mock functionality - Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     toast({
-      title: 'Message envoyé !',
-      description: 'Nous vous contacterons bientôt pour confirmer votre rendez-vous.',
+      title: c.successTitle,
+      description: c.successDescription,
     });
     
     form.reset();
@@ -65,9 +128,9 @@ export default function ContactForm() {
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom complet</FormLabel>
+              <FormLabel>{c.nameLabel}</FormLabel>
               <FormControl>
-                <Input placeholder="Votre nom" {...field} data-testid="input-name" />
+                <Input placeholder={c.namePlaceholder} {...field} data-testid="input-name" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -80,9 +143,9 @@ export default function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{c.emailLabel}</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="votre@email.com" {...field} data-testid="input-email" />
+                  <Input type="email" placeholder={c.emailPlaceholder} {...field} data-testid="input-email" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -94,9 +157,9 @@ export default function ContactForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Téléphone</FormLabel>
+                <FormLabel>{c.phoneLabel}</FormLabel>
                 <FormControl>
-                  <Input type="tel" placeholder="+212 6XX-XXXXXX" {...field} data-testid="input-phone" />
+                  <Input type="tel" placeholder={c.phonePlaceholder} {...field} data-testid="input-phone" dir="ltr" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -109,7 +172,7 @@ export default function ContactForm() {
           name="date"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Date souhaitée (optionnelle)</FormLabel>
+              <FormLabel>{c.dateLabel}</FormLabel>
               <FormControl>
                 <Input type="date" {...field} data-testid="input-date" />
               </FormControl>
@@ -123,10 +186,10 @@ export default function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message</FormLabel>
+              <FormLabel>{c.messageLabel}</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Décrivez brièvement la raison de votre rendez-vous..."
+                  placeholder={c.messagePlaceholder}
                   className="min-h-32 resize-none"
                   {...field}
                   data-testid="input-message"
@@ -138,7 +201,7 @@ export default function ContactForm() {
         />
 
         <Button type="submit" size="lg" disabled={isSubmitting} className="w-full gap-2" data-testid="button-submit">
-          {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
+          {isSubmitting ? c.submittingButton : c.submitButton}
           <Send className="h-4 w-4" />
         </Button>
       </form>
