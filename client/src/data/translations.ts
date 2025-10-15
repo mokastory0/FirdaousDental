@@ -27,6 +27,7 @@ export const translations = {
     'hero.cta.primary': 'Prendre Rendez-vous',
     'hero.cta.secondary': 'Nos Services',
     'hero.parking': 'Stationnement disponible et simple en face du cabinet. (Résidence Nadia. Bd Roudani)',
+    'hero.phone': 'Appelez-nous maintenant',
     'hero.rating': '5★ avis sur Google',
     
     // Services
@@ -105,6 +106,7 @@ export const translations = {
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
     'hero.parking': 'موقف سيارات متاح وسهل أمام العيادة. (إقامة نادية. شارع الروداني)',
+    'hero.phone': 'اتصل بنا الآن',
     'hero.rating': '٥★ تقييمات على جوجل',
     
     // Services
@@ -183,6 +185,7 @@ export const translations = {
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
     'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Roudani St.)',
+    'hero.phone': 'Call us now',
     'hero.rating': '5★ reviews on Google',
     
     // Services

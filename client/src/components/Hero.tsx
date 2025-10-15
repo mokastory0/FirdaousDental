@@ -2,11 +2,11 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { Link } from 'wouter';
-import { CarFront } from 'lucide-react';
+import { CarFront, Phone } from 'lucide-react';
 import heroImage from '@assets/dentistback_1759836434776.jpg';
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { localizePath } = useLocalizedPath();
 
   return (
@@ -29,10 +29,22 @@ export default function Hero() {
           {t('hero.description')}
         </p>
         
-        <div className="flex items-center justify-center gap-2 mb-8 text-sm md:text-base opacity-90">
+        <div className="flex items-center justify-center gap-2 mb-6 text-sm md:text-base opacity-90">
           <CarFront className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
           <span className="drop-shadow">{t('hero.parking')}</span>
         </div>
+
+        <a 
+          href="tel:+212520960611" 
+          className="inline-flex items-center gap-3 px-8 py-4 mb-8 bg-primary/90 hover:bg-primary text-white rounded-full text-lg md:text-xl font-semibold shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+          data-testid="button-hero-phone"
+        >
+          <Phone className="h-5 w-5 md:h-6 md:w-6 animate-pulse" />
+          <div className="flex flex-col items-start">
+            <span className="text-xs md:text-sm opacity-90">{t('hero.phone')}</span>
+            <span className="font-bold" dir="ltr">+212 520-960611</span>
+          </div>
+        </a>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link href={localizePath('contact')}>
