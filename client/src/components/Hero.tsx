@@ -10,7 +10,7 @@ export default function Hero() {
   const { localizePath } = useLocalizedPath();
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-44">
+    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-56">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -45,24 +45,6 @@ export default function Hero() {
             <span className="font-bold" dir="ltr">+212 520-960611</span>
           </div>
         </a>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24 md:mb-8">
-          <Link href={localizePath('contact')}>
-            <Button size="lg" className="text-lg px-8" data-testid="button-cta-primary">
-              {t('hero.cta.primary')}
-            </Button>
-          </Link>
-          <Link href={localizePath('services')}>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 bg-background/20 backdrop-blur-sm border-white/30 text-white hover:bg-background/30"
-              data-testid="button-cta-secondary"
-            >
-              {t('hero.cta.secondary')}
-            </Button>
-          </Link>
-        </div>
 
         <div className="inline-block px-6 py-3 bg-background/20 backdrop-blur-md rounded-lg border border-white/20">
           <p className="text-sm md:text-base font-medium">{t('hero.rating')}</p>
