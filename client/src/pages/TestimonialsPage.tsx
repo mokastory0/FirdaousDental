@@ -10,22 +10,19 @@ export default function TestimonialsPage() {
     fr: {
       title: 'Avis de nos Patients',
       subtitle: 'Découvrez ce que nos patients disent de leur expérience',
-      rating: '/ 5 sur Google',
-      reviews: 'Plus de 250 avis patients vérifiés',
+      rating: '5★ avis sur Google',
       button: 'Voir tous les avis sur Google',
     },
     ar: {
       title: 'آراء مرضانا',
       subtitle: 'اكتشف ما يقوله مرضانا عن تجربتهم',
-      rating: '/ ٥ على جوجل',
-      reviews: 'أكثر من ٢٥٠ تقييم مريض موثق',
+      rating: '٥★ تقييمات على جوجل',
       button: 'عرض جميع التقييمات على جوجل',
     },
     en: {
       title: 'Patient Reviews',
       subtitle: 'Discover what our patients say about their experience',
-      rating: '/ 5 on Google',
-      reviews: 'Over 250 verified patient reviews',
+      rating: '5★ reviews on Google',
       button: 'View all reviews on Google',
     },
   };
@@ -141,15 +138,8 @@ export default function TestimonialsPage() {
             {c.subtitle}
           </p>
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-lg border">
-            <div className="flex items-center gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-              ))}
-            </div>
-            <span className="text-2xl font-bold" dir="ltr">5.0</span>
             <span className="text-muted-foreground">{c.rating}</span>
           </div>
-          <p className="mt-4 text-muted-foreground">{c.reviews}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

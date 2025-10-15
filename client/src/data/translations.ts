@@ -25,7 +25,7 @@ export const translations = {
     'hero.description': 'Découvrez des soins dentaires d\'exception avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un environnement moderne et chaleureux.',
     'hero.cta.primary': 'Prendre Rendez-vous',
     'hero.cta.secondary': 'Nos Services',
-    'hero.rating': '4.8★ sur Google | 250+ avis patients',
+    'hero.rating': '5★ avis sur Google',
     
     // Services
     'services.title': 'Nos Services',
@@ -101,7 +101,7 @@ export const translations = {
     'hero.description': 'اكتشف رعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في بيئة حديثة ودافئة.',
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
-    'hero.rating': '٤.٨★ على جوجل | أكثر من ٢٥٠ مراجعة',
+    'hero.rating': '٥★ تقييمات على جوجل',
     
     // Services
     'services.title': 'خدماتنا',
@@ -177,7 +177,7 @@ export const translations = {
     'hero.description': 'Discover exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern and warm environment.',
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
-    'hero.rating': '4.8★ on Google | 250+ patient reviews',
+    'hero.rating': '5★ reviews on Google',
     
     // Services
     'services.title': 'Our Services',
