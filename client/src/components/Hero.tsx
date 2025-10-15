@@ -10,7 +10,7 @@ export default function Hero() {
   const { localizePath } = useLocalizedPath();
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden pt-56">
+    <section className="relative min-h-screen md:min-h-[70vh] md:h-[70vh] flex items-center justify-center overflow-hidden pt-[var(--header-height)] md:pt-0">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}

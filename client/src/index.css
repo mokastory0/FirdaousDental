@@ -90,6 +90,7 @@
   --shadow-2xl: 0px 30px 50px -12px hsl(200 15% 20% / 0.20);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  --header-height: 4rem; /* 64px - mobile header height */
 
   /* Automatically computed borders - intensity can be controlled by the user by the --opaque-button-border-intensity setting */
 
