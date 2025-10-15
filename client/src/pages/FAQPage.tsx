@@ -38,7 +38,7 @@ export default function FAQPage() {
       appointments: [
         {
           question: 'Comment prendre rendez-vous ?',
-          answer: 'Vous pouvez prendre rendez-vous par téléphone au +212 665 477 745, par WhatsApp, ou via notre formulaire de contact en ligne. Nous vous confirmerons votre rendez-vous dans les plus brefs délais.',
+          answer: 'Vous pouvez prendre rendez-vous par téléphone au +212 520-960611, par WhatsApp, ou via notre formulaire de contact en ligne. Nous vous confirmerons votre rendez-vous dans les plus brefs délais.',
         },
         {
           question: 'Quels sont vos horaires d\'ouverture ?',
@@ -100,7 +100,7 @@ export default function FAQPage() {
       appointments: [
         {
           question: 'كيف يمكنني حجز موعد؟',
-          answer: 'يمكنك حجز موعد عبر الهاتف على +٢١٢ ٦٦٥ ٤٧٧ ٧٤٥، عبر واتساب، أو من خلال نموذج الاتصال عبر الإنترنت. سنؤكد موعدك في أقرب وقت ممكن.',
+          answer: 'يمكنك حجز موعد عبر الهاتف على +٢١٢ ٥٢٠-٩٦٠٦١١، عبر واتساب، أو من خلال نموذج الاتصال عبر الإنترنت. سنؤكد موعدك في أقرب وقت ممكن.',
         },
         {
           question: 'ما هي ساعات العمل؟',
@@ -162,7 +162,7 @@ export default function FAQPage() {
       appointments: [
         {
           question: 'How do I make an appointment?',
-          answer: 'You can make an appointment by phone at +212 665 477 745, via WhatsApp, or through our online contact form. We will confirm your appointment as soon as possible.',
+          answer: 'You can make an appointment by phone at +212 520-960611, via WhatsApp, or through our online contact form. We will confirm your appointment as soon as possible.',
         },
         {
           question: 'What are your opening hours?',

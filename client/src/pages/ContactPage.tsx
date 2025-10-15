@@ -79,7 +79,7 @@ export default function ContactPage() {
   const c = content[language];
 
   const handleWhatsAppClick = () => {
-    const phone = '212665477745';
+    const phone = '212520960611';
     const message = encodeURIComponent(
       language === 'fr'
         ? 'Bonjour, je souhaiterais prendre rendez-vous...'
@@ -91,7 +91,7 @@ export default function ContactPage() {
   };
 
   const handleBookingClick = () => {
-    window.open('https://calendly.com/mohamed-mokastory/30min', '_blank');
+    window.open('https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108', '_blank');
   };
 
   const handleMapsClick = () => {
@@ -146,8 +146,8 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1">
                       <div className="font-semibold mb-1">{c.phoneLabel}</div>
-                      <p className="text-muted-foreground mb-2" dir="ltr">+212 665 477 745</p>
-                      <a href="tel:+212665477745">
+                      <p className="text-muted-foreground mb-2" dir="ltr">+212 520-960611</p>
+                      <a href="tel:+212520960611">
                         <Button size="sm" variant="outline" data-testid="button-call">
                           {c.callNow}
                         </Button>

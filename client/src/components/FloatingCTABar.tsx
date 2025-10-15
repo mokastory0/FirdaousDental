@@ -10,7 +10,7 @@ export default function FloatingCTABar() {
       call: 'Appeler',
       whatsapp: 'WhatsApp',
       maps: 'Maps',
-      book: 'Réserver',
+      book: 'Prendre Rdv',
     },
     ar: {
       call: 'اتصل',
@@ -29,11 +29,11 @@ export default function FloatingCTABar() {
   const c = content[language];
 
   const handleCall = () => {
-    window.location.href = 'tel:+212665477745';
+    window.location.href = 'tel:+212520960611';
   };
 
   const handleWhatsApp = () => {
-    const phone = '212665477745';
+    const phone = '212520960611';
     const message = encodeURIComponent(
       language === 'fr'
         ? 'Bonjour, je souhaiterais prendre rendez-vous...'
@@ -49,7 +49,7 @@ export default function FloatingCTABar() {
   };
 
   const handleBook = () => {
-    window.open('https://calendly.com/mohamed-mokastory/30min', '_blank');
+    window.open('https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108', '_blank');
   };
 
   return (
