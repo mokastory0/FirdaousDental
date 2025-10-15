@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { Link } from 'wouter';
+import { CarFront } from 'lucide-react';
 import heroImage from '@assets/dentistback_1759836434776.jpg';
 
 export default function Hero() {
@@ -24,9 +25,14 @@ export default function Hero() {
         <p className="text-xl md:text-2xl mb-2 font-medium drop-shadow-md">
           {t('hero.subtitle')}
         </p>
-        <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed opacity-95 drop-shadow">
+        <p className="text-base md:text-lg mb-4 max-w-2xl mx-auto leading-relaxed opacity-95 drop-shadow">
           {t('hero.description')}
         </p>
+        
+        <div className="flex items-center justify-center gap-2 mb-8 text-sm md:text-base opacity-90">
+          <CarFront className="h-5 w-5" />
+          <span className="drop-shadow">{t('hero.parking')}</span>
+        </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link href={localizePath('contact')}>
