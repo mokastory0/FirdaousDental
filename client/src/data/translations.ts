@@ -10,6 +10,7 @@ export const translations = {
     'nav.faq': 'FAQ',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
+    'nav.logo.subtitle': 'Cabinet Dentaire',
     
     // CTA Buttons
     'cta.book': 'Prendre Rendez-vous',
@@ -87,6 +88,7 @@ export const translations = {
     'nav.faq': 'الأسئلة الشائعة',
     'nav.blog': 'المدونة',
     'nav.contact': 'اتصل بنا',
+    'nav.logo.subtitle': 'عيادة أسنان',
     
     // CTA Buttons
     'cta.book': 'احجز موعد',
@@ -164,6 +166,7 @@ export const translations = {
     'nav.faq': 'FAQ',
     'nav.blog': 'Blog',
     'nav.contact': 'Contact',
+    'nav.logo.subtitle': 'Dental Clinic',
     
     // CTA Buttons
     'cta.book': 'Book Appointment',

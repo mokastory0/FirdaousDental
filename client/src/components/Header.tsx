@@ -6,6 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
+import logoImage from '@assets/logofird_1760560772644.jpg';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,9 +33,15 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <Link href={localizePath('')} className="flex items-center space-x-2" data-testid="link-home">
-            <div className="flex items-center">
-              <div className="text-xl font-bold text-primary">Dr. Firdaous MOUSTAINE</div>
+          <Link href={localizePath('')} className="flex items-center gap-3" data-testid="link-home">
+            <img 
+              src={logoImage} 
+              alt="Dr. Firdaous MOUSTAINE" 
+              className="h-10 w-10 md:h-12 md:w-12 object-contain"
+            />
+            <div className="flex flex-col">
+              <div className="text-base md:text-xl font-bold text-primary leading-tight">Dr. Firdaous MOUSTAINE</div>
+              <div className="hidden md:block text-xs text-muted-foreground">{t('nav.logo.subtitle')}</div>
             </div>
           </Link>
 
