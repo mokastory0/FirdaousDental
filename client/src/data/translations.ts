@@ -179,7 +179,7 @@ export const translations = {
     'hero.description': 'Discover exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern and warm environment.',
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
-    'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Bd Roudani)',
+    'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Roudani St.)',
     'hero.rating': '5★ reviews on Google',
     
     // Services
