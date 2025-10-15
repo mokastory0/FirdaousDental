@@ -6,7 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
-import logoImage from '@assets/unnamed-removebg-preview (1)_1760561795917.png';
+import logoImage from '@assets/ChatGPT Image Oct 15, 2025, 10_01_54 PM_1760562210918.png';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
