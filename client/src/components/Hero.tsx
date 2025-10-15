@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { Link } from 'wouter';
-import { MapPin } from 'lucide-react';
+import { CarFront } from 'lucide-react';
 import heroImage from '@assets/dentistback_1759836434776.jpg';
 
 export default function Hero() {
@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
         
         <div className="flex items-center justify-center gap-2 mb-8 text-sm md:text-base opacity-90">
-          <MapPin className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
+          <CarFront className="h-4 w-4 md:h-5 md:w-5 flex-shrink-0" />
           <span className="drop-shadow">{t('hero.parking')}</span>
         </div>
 
