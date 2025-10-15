@@ -26,7 +26,7 @@ export default function Hero() {
           {t('hero.subtitle')}
         </p>
         <p className="text-base md:text-lg mb-4 max-w-2xl mx-auto leading-relaxed opacity-95 drop-shadow">
-          {t('hero.description')}
+          {t('hero.description')} <strong className="font-bold">{t('hero.languages')}</strong>.
         </p>
         
         <div className="flex items-center justify-center gap-2 mb-6 text-sm md:text-base opacity-90">

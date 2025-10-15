@@ -23,7 +23,8 @@ export const translations = {
     // Hero Section
     'hero.title': 'Votre sourire, notre priorité',
     'hero.subtitle': 'Cabinet Dentaire Moderne à Casablanca',
-    'hero.description': 'Découvrez des soins dentaires d\'exception avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un environnement moderne et chaleureux.',
+    'hero.description': 'Profitez de soins dentaires exceptionnels avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un cabinet moderne et chaleureux — parlant',
+    'hero.languages': 'français, arabe et anglais',
     'hero.cta.primary': 'Prendre Rendez-vous',
     'hero.cta.secondary': 'Nos Services',
     'hero.parking': 'Stationnement disponible et simple en face du cabinet. (Résidence Nadia. Bd Roudani)',
@@ -102,7 +103,8 @@ export const translations = {
     // Hero Section
     'hero.title': 'ابتسامتك، أولويتنا',
     'hero.subtitle': 'عيادة أسنان حديثة في الدار البيضاء',
-    'hero.description': 'اكتشف رعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في بيئة حديثة ودافئة.',
+    'hero.description': 'استمتع برعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في عيادة حديثة ودافئة — نتحدث',
+    'hero.languages': 'الفرنسية والعربية والإنجليزية',
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
     'hero.parking': 'موقف سيارات متاح وسهل أمام العيادة. (إقامة نادية. شارع الروداني)',
@@ -181,7 +183,8 @@ export const translations = {
     // Hero Section
     'hero.title': 'Your smile, our priority',
     'hero.subtitle': 'Modern Dental Clinic in Casablanca',
-    'hero.description': 'Discover exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern and warm environment.',
+    'hero.description': 'Enjoy exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern, warm clinic — speaking',
+    'hero.languages': 'French, Arabic, and English',
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
     'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Roudani St.)',
