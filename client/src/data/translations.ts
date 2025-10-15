@@ -62,7 +62,7 @@ export const translations = {
     'footer.phone': 'Téléphone',
     'footer.email': 'Email',
     'footer.hours': 'Horaires',
-    'footer.hours.mon-fri': 'Lun-Ven: 9h00 - 18h00',
+    'footer.hours.mon-fri': 'Lun-Ven: 9h00 - 17h00',
     'footer.hours.sat': 'Sam: 9h00 - 13h00',
     'footer.copyright': '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. Tous droits réservés.',
     
@@ -140,7 +140,7 @@ export const translations = {
     'footer.phone': 'الهاتف',
     'footer.email': 'البريد الإلكتروني',
     'footer.hours': 'ساعات العمل',
-    'footer.hours.mon-fri': 'الإثنين-الجمعة: ٩:٠٠ - ١٨:٠٠',
+    'footer.hours.mon-fri': 'الإثنين-الجمعة: ٩:٠٠ - ١٧:٠٠',
     'footer.hours.sat': 'السبت: ٩:٠٠ - ١٣:٠٠',
     'footer.copyright': '© ٢٠٢٥ عيادة د. فردوس مستين. جميع الحقوق محفوظة.',
     
@@ -218,7 +218,7 @@ export const translations = {
     'footer.phone': 'Phone',
     'footer.email': 'Email',
     'footer.hours': 'Office Hours',
-    'footer.hours.mon-fri': 'Mon-Fri: 9:00 AM - 6:00 PM',
+    'footer.hours.mon-fri': 'Mon-Fri: 9:00 AM - 5:00 PM',
     'footer.hours.sat': 'Sat: 9:00 AM - 1:00 PM',
     'footer.copyright': '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. All rights reserved.',
     

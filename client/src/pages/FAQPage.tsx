@@ -42,7 +42,7 @@ export default function FAQPage() {
         },
         {
           question: 'Quels sont vos horaires d\'ouverture ?',
-          answer: 'Nous sommes ouverts du lundi au vendredi de 9h00 à 18h00, et le samedi de 9h00 à 13h00. Nous sommes fermés le dimanche.',
+          answer: 'Nous sommes ouverts du lundi au vendredi de 9h00 à 17h00, et le samedi de 9h00 à 13h00. Nous sommes fermés le dimanche.',
         },
         {
           question: 'Acceptez-vous les urgences dentaires ?',
@@ -104,7 +104,7 @@ export default function FAQPage() {
         },
         {
           question: 'ما هي ساعات العمل؟',
-          answer: 'نحن مفتوحون من الاثنين إلى الجمعة من ٩:٠٠ صباحاً إلى ٦:٠٠ مساءً، والسبت من ٩:٠٠ صباحاً إلى ١:٠٠ ظهراً. نحن مغلقون يوم الأحد.',
+          answer: 'نحن مفتوحون من الاثنين إلى الجمعة من ٩:٠٠ صباحاً إلى ٥:٠٠ مساءً، والسبت من ٩:٠٠ صباحاً إلى ١:٠٠ ظهراً. نحن مغلقون يوم الأحد.',
         },
         {
           question: 'هل تقبلون حالات الطوارئ السنية؟',
@@ -166,7 +166,7 @@ export default function FAQPage() {
         },
         {
           question: 'What are your opening hours?',
-          answer: 'We are open Monday to Friday from 9:00 AM to 6:00 PM, and Saturday from 9:00 AM to 1:00 PM. We are closed on Sundays.',
+          answer: 'We are open Monday to Friday from 9:00 AM to 5:00 PM, and Saturday from 9:00 AM to 1:00 PM. We are closed on Sundays.',
         },
         {
           question: 'Do you accept dental emergencies?',
