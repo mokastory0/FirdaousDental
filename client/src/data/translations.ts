@@ -25,7 +25,7 @@ export const translations = {
     'hero.description': 'Découvrez des soins dentaires d\'exception avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un environnement moderne et chaleureux.',
     'hero.cta.primary': 'Prendre Rendez-vous',
     'hero.cta.secondary': 'Nos Services',
-    'hero.parking': 'Stationnement disponible et simple en face du cabinet.',
+    'hero.parking': 'Stationnement disponible et simple en face du cabinet. (Résidence Nadia. Bd Roudani)',
     'hero.rating': '5★ avis sur Google',
     
     // Services
@@ -102,7 +102,7 @@ export const translations = {
     'hero.description': 'اكتشف رعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في بيئة حديثة ودافئة.',
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
-    'hero.parking': 'موقف سيارات متاح وسهل أمام العيادة.',
+    'hero.parking': 'موقف سيارات متاح وسهل أمام العيادة. (إقامة نادية. شارع الروداني)',
     'hero.rating': '٥★ تقييمات على جوجل',
     
     // Services
@@ -179,7 +179,7 @@ export const translations = {
     'hero.description': 'Discover exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern and warm environment.',
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
-    'hero.parking': 'Parking available and easy right in front of the clinic.',
+    'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Bd Roudani)',
     'hero.rating': '5★ reviews on Google',
     
     // Services
