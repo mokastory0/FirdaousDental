@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import FloatingCTABar from "@/components/FloatingCTABar";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
 import ServiceWhiteningPage from "@/pages/ServiceWhiteningPage";
@@ -64,11 +64,11 @@ function App() {
           <TooltipProvider>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-1">
+              <main className="flex-1 pb-20 md:pb-24">
                 <Router />
               </main>
               <Footer />
-              <WhatsAppButton />
+              <FloatingCTABar />
             </div>
             <Toaster />
           </TooltipProvider>
