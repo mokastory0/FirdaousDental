@@ -18,7 +18,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 pb-24 md:pb-8 text-center text-white">
+      <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
           {t('hero.title')}
         </h1>
@@ -46,7 +46,7 @@ export default function Hero() {
           </div>
         </a>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24 md:mb-8">
           <Link href={localizePath('contact')}>
             <Button size="lg" className="text-lg px-8" data-testid="button-cta-primary">
               {t('hero.cta.primary')}
