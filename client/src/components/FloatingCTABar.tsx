@@ -33,7 +33,7 @@ export default function FloatingCTABar() {
   };
 
   const handleWhatsApp = () => {
-    const phone = '212520960611';
+    const phone = '212665477745';
     const message = encodeURIComponent(
       language === 'fr'
         ? 'Bonjour, je souhaiterais prendre rendez-vous...'

@@ -79,7 +79,7 @@ export default function ContactPage() {
   const c = content[language];
 
   const handleWhatsAppClick = () => {
-    const phone = '212520960611';
+    const phone = '212665477745';
     const message = encodeURIComponent(
       language === 'fr'
         ? 'Bonjour, je souhaiterais prendre rendez-vous...'

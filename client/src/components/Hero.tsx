@@ -36,7 +36,7 @@ export default function Hero() {
 
         <a 
           href="tel:+212520960611" 
-          className="inline-flex items-center gap-3 px-8 py-4 mb-8 bg-primary/90 hover:bg-primary text-white rounded-full text-lg md:text-xl font-semibold shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+          className="inline-flex items-center gap-3 px-8 py-4 mb-6 md:mb-12 bg-primary/90 hover:bg-primary text-white rounded-full text-lg md:text-xl font-semibold shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
           data-testid="button-hero-phone"
         >
           <Phone className="h-5 w-5 md:h-6 md:w-6 animate-pulse" />

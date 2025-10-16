@@ -12,7 +12,7 @@ export default function WhatsAppButton() {
   };
 
   const handleWhatsAppClick = () => {
-    const phone = '212520960611';
+    const phone = '212665477745';
     const message = encodeURIComponent(messages[language]);
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };

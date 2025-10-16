@@ -30,7 +30,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed md:sticky top-0 z-50 w-full border-b md:border-b bg-background/80 md:bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/40 md:supports-[backdrop-filter]:bg-background/60">
+    <header className="fixed md:sticky top-0 z-50 w-full border-b bg-background/95 md:bg-background/95 backdrop-blur-lg supports-[backdrop-filter]:bg-background/90 md:supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href={localizePath('')} className="flex items-center gap-2 md:gap-3 flex-1 min-w-0" data-testid="link-home">
