@@ -34,20 +34,22 @@ export default function Hero() {
           <span className="drop-shadow">{t('hero.parking')}</span>
         </div>
 
-        <a 
-          href="tel:+212520960611" 
-          className="inline-flex items-center gap-3 px-8 py-4 mb-6 md:mb-12 bg-primary/90 hover:bg-primary text-white rounded-full text-lg md:text-xl font-semibold shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-          data-testid="button-hero-phone"
-        >
-          <Phone className="h-5 w-5 md:h-6 md:w-6 animate-pulse" />
-          <div className="flex flex-col items-start">
-            <span className="text-xs md:text-sm opacity-90">{t('hero.phone')}</span>
-            <span className="font-bold" dir="ltr">+212 520-960611</span>
-          </div>
-        </a>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
+          <a 
+            href="tel:+212520960611" 
+            className="inline-flex items-center gap-3 px-8 py-4 bg-primary/90 hover:bg-primary text-white rounded-full text-lg md:text-xl font-semibold shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+            data-testid="button-hero-phone"
+          >
+            <Phone className="h-5 w-5 md:h-6 md:w-6 animate-pulse" />
+            <div className="flex flex-col items-start">
+              <span className="text-xs md:text-sm opacity-90">{t('hero.phone')}</span>
+              <span className="font-bold" dir="ltr">+212 520-960611</span>
+            </div>
+          </a>
 
-        <div className="inline-block px-6 py-3 bg-background/20 backdrop-blur-md rounded-lg border border-white/20">
-          <p className="text-sm md:text-base font-medium">{t('hero.rating')}</p>
+          <div className="inline-block px-6 py-3 bg-background/20 backdrop-blur-md rounded-lg border border-white/20">
+            <p className="text-sm md:text-base font-medium">{t('hero.rating')}</p>
+          </div>
         </div>
       </div>
     </section>
