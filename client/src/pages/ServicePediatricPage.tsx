@@ -148,8 +148,9 @@ export default function ServicePediatricPage() {
         <div className="rounded-lg overflow-hidden mb-12">
           <img
             src={pediatricImage}
-            alt={c.title}
-            className="w-full h-96 object-cover"
+            alt={c.imageAlt}
+            className="rounded-2xl shadow-2xl w-full h-auto"
+            loading="lazy"
           />
         </div>
 

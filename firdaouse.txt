@@ -1,0 +1,16 @@
+https://dashboard.stripe.com/test/products
+
+
+cloudflared tunnel route dns hellofresh-dev hellofreshrecipes.com
+cloudflared tunnel route dns hellofresh-dev www.hellofreshrecipes.com
+
+cloudflared tunnel run hellofresh-dev
+
+
+G-FT0M3Q8FQJ
+https://open.spotify.com/intl-fr/track/3pCoV2MKH9OTJg7Lw94frH?si=af2936ab22f742a5
+
+
+
+npm run build
+

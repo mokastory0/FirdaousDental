@@ -143,7 +143,7 @@ export default function ServiceCrownsPage() {
         </div>
 
         <div className="rounded-lg overflow-hidden mb-12">
-          <img src={crownImage} alt={c.title} className="w-full h-96 object-cover" />
+          <img src={crownImage} alt={c.title} className="w-full h-96 object-cover" loading="lazy" />
         </div>
 
         <div className="space-y-12">

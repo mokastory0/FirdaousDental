@@ -143,7 +143,7 @@ export default function ServiceOrthodonticsPage() {
         </div>
 
         <div className="rounded-lg overflow-hidden mb-12">
-          <img src={orthodonticsImage} alt={c.title} className="w-full h-96 object-cover" />
+          <img src={orthodonticsImage} alt={c.title} className="w-full h-96 object-cover" loading="lazy" />
         </div>
 
         <div className="space-y-12">

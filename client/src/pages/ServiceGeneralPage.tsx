@@ -143,7 +143,12 @@ export default function ServiceGeneralPage() {
         </div>
 
         <div className="rounded-lg overflow-hidden mb-12">
-          <img src={generalImage} alt={c.title} className="w-full h-96 object-cover" />
+          <img
+            src={generalImage}
+            alt={c.imageAlt}
+            className="rounded-2xl shadow-2xl w-full h-auto"
+            loading="lazy"
+          />
         </div>
 
         <div className="space-y-12">

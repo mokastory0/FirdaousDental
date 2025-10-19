@@ -143,7 +143,7 @@ export default function ServiceGumPage() {
         </div>
 
         <div className="rounded-lg overflow-hidden mb-12">
-          <img src={gumImage} alt={c.title} className="w-full h-96 object-cover" />
+          <img src={gumImage} alt={c.title} className="w-full h-96 object-cover" loading="lazy" />
         </div>
 
         <div className="space-y-12">

@@ -26,6 +26,7 @@ export default function BlogCard({ id, title, excerpt, category, date, readTime,
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform hover:scale-105"
+            loading="lazy"
           />
         </div>
       )}

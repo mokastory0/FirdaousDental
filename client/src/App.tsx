@@ -5,19 +5,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { useRef, lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import FloatingCTABar from "@/components/FloatingCTABar";
+import WhatsAppChatWidget, { WhatsAppChatWidgetRef } from "@/components/WhatsAppChatWidget";
+import CornerActionButtons from "@/components/CornerActionButtons";
 import HomePage from "@/pages/HomePage";
 import ServicesPage from "@/pages/ServicesPage";
-import ServiceWhiteningPage from "@/pages/ServiceWhiteningPage";
-import ServicePediatricPage from "@/pages/ServicePediatricPage";
-import ServiceCrownsPage from "@/pages/ServiceCrownsPage";
-import ServiceImplantsPage from "@/pages/ServiceImplantsPage";
-import ServiceDenturesPage from "@/pages/ServiceDenturesPage";
-import ServiceOrthodonticsPage from "@/pages/ServiceOrthodonticsPage";
-import ServiceGumPage from "@/pages/ServiceGumPage";
-import ServiceGeneralPage from "@/pages/ServiceGeneralPage";
 import AboutPage from "@/pages/AboutPage";
 import TestimonialsPage from "@/pages/TestimonialsPage";
 import FAQPage from "@/pages/FAQPage";
@@ -25,6 +19,16 @@ import BlogPage from "@/pages/BlogPage";
 import BlogArticlePage from "@/pages/BlogArticlePage";
 import ContactPage from "@/pages/ContactPage";
 import NotFound from "@/pages/not-found";
+
+// Task 9.2: Lazy load service pages for better performance
+const ServiceWhiteningPage = lazy(() => import("@/pages/ServiceWhiteningPage"));
+const ServicePediatricPage = lazy(() => import("@/pages/ServicePediatricPage"));
+const ServiceCrownsPage = lazy(() => import("@/pages/ServiceCrownsPage"));
+const ServiceImplantsPage = lazy(() => import("@/pages/ServiceImplantsPage"));
+const ServiceDenturesPage = lazy(() => import("@/pages/ServiceDenturesPage"));
+const ServiceOrthodonticsPage = lazy(() => import("@/pages/ServiceOrthodonticsPage"));
+const ServiceGumPage = lazy(() => import("@/pages/ServiceGumPage"));
+const ServiceGeneralPage = lazy(() => import("@/pages/ServiceGeneralPage"));
 
 function Router() {
   return (
@@ -37,14 +41,65 @@ function Router() {
       {/* Language-prefixed routes */}
       <Route path="/:lang" component={HomePage} />
       <Route path="/:lang/services" component={ServicesPage} />
-      <Route path="/:lang/services/whitening" component={ServiceWhiteningPage} />
-      <Route path="/:lang/services/pediatric" component={ServicePediatricPage} />
-      <Route path="/:lang/services/crowns" component={ServiceCrownsPage} />
-      <Route path="/:lang/services/implants" component={ServiceImplantsPage} />
-      <Route path="/:lang/services/dentures" component={ServiceDenturesPage} />
-      <Route path="/:lang/services/orthodontics" component={ServiceOrthodonticsPage} />
-      <Route path="/:lang/services/gum" component={ServiceGumPage} />
-      <Route path="/:lang/services/general" component={ServiceGeneralPage} />
+      
+      {/* Lazy-loaded service pages wrapped in Suspense */}
+      <Route path="/:lang/services/whitening">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceWhiteningPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/pediatric">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServicePediatricPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/crowns">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceCrownsPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/implants">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceImplantsPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/dentures">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceDenturesPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/orthodontics">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceOrthodonticsPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/gum">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceGumPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/general">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <ServiceGeneralPage />
+          </Suspense>
+        )}
+      </Route>
+      
       <Route path="/:lang/about" component={AboutPage} />
       <Route path="/:lang/testimonials" component={TestimonialsPage} />
       <Route path="/:lang/faq" component={FAQPage} />
@@ -57,6 +112,12 @@ function Router() {
 }
 
 function App() {
+  const chatWidgetRef = useRef<WhatsAppChatWidgetRef>(null);
+
+  const handleToggleChat = () => {
+    chatWidgetRef.current?.toggle();
+  };
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
@@ -64,11 +125,12 @@ function App() {
           <TooltipProvider>
             <div className="flex flex-col min-h-screen">
               <Header />
-              <main className="flex-1 pb-20 md:pb-24">
+              <main className="flex-1">
                 <Router />
               </main>
               <Footer />
-              <FloatingCTABar />
+              <WhatsAppChatWidget ref={chatWidgetRef} />
+              <CornerActionButtons onWhatsAppClick={handleToggleChat} />
             </div>
             <Toaster />
           </TooltipProvider>

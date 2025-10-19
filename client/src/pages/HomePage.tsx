@@ -1,7 +1,9 @@
 import { Link } from 'wouter';
 import Hero from '@/components/Hero';
+import DoctorIntroSection from '@/components/DoctorIntroSection';
+import ClinicVirtualTour from '@/components/ClinicVirtualTour';
 import ServiceCard from '@/components/ServiceCard';
-import TestimonialCard from '@/components/TestimonialCard';
+import GoogleReviewsSection from '@/components/GoogleReviewsSection';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Crown, Anchor, Smile, Braces, Baby, Heart, Stethoscope, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -256,6 +258,9 @@ export default function HomePage() {
     <div>
       <Hero />
 
+      {/* Doctor Introduction Section */}
+      <DoctorIntroSection />
+
       <section className="pt-24 pb-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -309,37 +314,18 @@ export default function HomePage() {
                 src={equipmentImage}
                 alt={content.equipmentTitle}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{content.testimonialsTitle}</h2>
-            <p className="text-lg text-muted-foreground">
-              {content.testimonialsSubtitle}
-            </p>
-          </div>
+      {/* Clinic Virtual Tour Section */}
+      <ClinicVirtualTour />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
-            ))}
-          </div>
-
-          <div className="text-center">
-            <Link href={localizePath('testimonials')}>
-              <Button size="lg" variant="outline" className="gap-2" data-testid="link-all-testimonials">
-                {content.viewAllTestimonials}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Google Reviews Section - Phase 5 */}
+      <GoogleReviewsSection />
 
       <section className="py-16 md:py-24 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">

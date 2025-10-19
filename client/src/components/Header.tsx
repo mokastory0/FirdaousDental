@@ -11,8 +11,14 @@ import logoImage from '@assets/ChatGPT Image Oct 15, 2025, 10_01_54 PM_176056221
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  const doctorName = {
+    fr: 'Dr. Firdaous MOUSTAINE',
+    ar: 'د. فردوس موستين',
+    en: 'Dr. Firdaous MOUSTAINE',
+  };
 
   const navItems = [
     { path: '', label: t('nav.home') },
@@ -30,17 +36,17 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed md:sticky top-0 z-50 w-full border-b bg-background/95 md:bg-background/95 backdrop-blur-lg supports-[backdrop-filter]:bg-background/90 md:supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <Link href={localizePath('')} className="flex items-center gap-2 md:gap-3 flex-1 min-w-0" data-testid="link-home">
+        <div className="flex h-16 items-center justify-between gap-1">
+          <Link href={localizePath('')} className="flex items-center gap-1.5 md:gap-3 flex-1 min-w-0 overflow-hidden" data-testid="link-home">
             <img 
               src={logoImage} 
               alt="Dr. Firdaous MOUSTAINE" 
-              className="h-9 w-9 md:h-12 md:w-12 object-contain flex-shrink-0"
+              className="h-8 w-8 md:h-12 md:w-12 object-contain flex-shrink-0"
             />
-            <div className="flex flex-col min-w-0 flex-1">
-              <div className="text-sm md:text-xl font-bold text-primary leading-tight truncate">Dr. Firdaous MOUSTAINE</div>
+            <div className="flex flex-col min-w-0 flex-1 overflow-hidden">
+              <div className="text-xs md:text-xl font-bold text-primary leading-tight truncate">{doctorName[language]}</div>
               <div className="hidden md:block text-xs text-muted-foreground">{t('nav.logo.subtitle')}</div>
             </div>
           </Link>
@@ -69,15 +75,17 @@ export default function Header() {
             </Button>
           </div>
 
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-0.5 flex-shrink-0">
+            <LanguageSwitcher />
             <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
+              className="h-9 w-9"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
-              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
@@ -98,9 +106,6 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
-            <div className="pt-2 border-t">
-              <LanguageSwitcher />
-            </div>
           </nav>
         </div>
       )}

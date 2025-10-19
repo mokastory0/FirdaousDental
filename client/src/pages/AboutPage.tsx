@@ -146,6 +146,7 @@ export default function AboutPage() {
                 src={equipmentImage}
                 alt={c.section2Title}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div>

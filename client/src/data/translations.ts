@@ -21,15 +21,19 @@ export const translations = {
     'cta.viewAll': 'Voir tous les avis',
     
     // Hero Section
+    'hero.badge': 'Cabinet Dentaire Moderne à Casablanca',
     'hero.title': 'Votre sourire, notre priorité',
-    'hero.subtitle': 'Cabinet Dentaire Moderne à Casablanca',
-    'hero.description': 'Profitez de soins dentaires exceptionnels avec les dernières technologies. Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un cabinet moderne et chaleureux — parlant',
+    'hero.subtitle': 'Soins dentaires exceptionnels avec les dernières technologies',
+    'hero.description': 'Dr. Firdaous MOUSTAINE et son équipe vous accueillent dans un cabinet moderne et chaleureux — parlant',
     'hero.languages': 'français, arabe et anglais',
     'hero.cta.primary': 'Prendre Rendez-vous',
     'hero.cta.secondary': 'Nos Services',
+    'hero.cta.book': 'Prendre Rendez-Vous',
     'hero.parking': 'Stationnement disponible et simple en face du cabinet. (Résidence Nadia. Bd Roudani)',
     'hero.phone': 'Appelez-nous maintenant',
     'hero.rating': '5★ avis sur Google',
+    'hero.stat.reviews': 'Google Reviews',
+    'hero.stat.experience': 'Grande Expérience',
     
     // Services
     'services.title': 'Nos Services',
@@ -101,15 +105,19 @@ export const translations = {
     'cta.viewAll': 'عرض جميع الآراء',
     
     // Hero Section
+    'hero.badge': 'عيادة أسنان حديثة في الدار البيضاء',
     'hero.title': 'ابتسامتك، أولويتنا',
-    'hero.subtitle': 'عيادة أسنان حديثة في الدار البيضاء',
-    'hero.description': 'استمتع برعاية أسنان استثنائية بأحدث التقنيات. الدكتورة فردوس مستين وفريقها يرحبون بكم في عيادة حديثة ودافئة — نتحدث',
+    'hero.subtitle': 'رعاية أسنان استثنائية بأحدث التقنيات',
+    'hero.description': 'الدكتورة فردوس مستين وفريقها يرحبون بكم في عيادة حديثة ودافئة — نتحدث',
     'hero.languages': 'الفرنسية والعربية والإنجليزية',
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
+    'hero.cta.book': 'احجز موعد',
     'hero.parking': 'موقف سيارات متاح وسهل أمام العيادة. (إقامة نادية. شارع الروداني)',
     'hero.phone': 'اتصل بنا الآن',
     'hero.rating': '٥★ تقييمات على جوجل',
+    'hero.stat.reviews': 'تقييمات جوجل',
+    'hero.stat.experience': 'خبرة كبيرة',
     
     // Services
     'services.title': 'خدماتنا',
@@ -181,15 +189,19 @@ export const translations = {
     'cta.viewAll': 'View All Reviews',
     
     // Hero Section
+    'hero.badge': 'Modern Dental Clinic in Casablanca',
     'hero.title': 'Your smile, our priority',
-    'hero.subtitle': 'Modern Dental Clinic in Casablanca',
-    'hero.description': 'Enjoy exceptional dental care with the latest technologies. Dr. Firdaous MOUSTAINE and her team welcome you in a modern, warm clinic — speaking',
+    'hero.subtitle': 'Exceptional dental care with the latest technologies',
+    'hero.description': 'Dr. Firdaous MOUSTAINE and her team welcome you in a modern, warm clinic — speaking',
     'hero.languages': 'French, Arabic, and English',
     'hero.cta.primary': 'Book Appointment',
     'hero.cta.secondary': 'Our Services',
+    'hero.cta.book': 'Book Appointment',
     'hero.parking': 'Parking available and easy right in front of the clinic. (Résidence Nadia. Roudani St.)',
     'hero.phone': 'Call us now',
     'hero.rating': '5★ reviews on Google',
+    'hero.stat.reviews': 'Google Reviews',
+    'hero.stat.experience': 'Great Experience',
     
     // Services
     'services.title': 'Our Services',
