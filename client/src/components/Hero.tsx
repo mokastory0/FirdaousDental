@@ -10,6 +10,15 @@ export default function Hero() {
   const { t, language } = useLanguage();
   const { localizePath } = useLocalizedPath();
 
+  const handleBooking = () => {
+    // Preserve GCLID for Google Ads conversion tracking
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get('gclid');
+    const baseUrl = 'https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108';
+    const bookingUrl = gclid ? `${baseUrl}?gclid=${gclid}` : baseUrl;
+    window.open(bookingUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4 md:pt-0">
       <div
@@ -74,16 +83,14 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-1000 px-4 max-w-4xl mx-auto">
           {/* Booking Button - Primary CTA */}
-          <a
-            href="https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full text-base font-bold shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 whitespace-nowrap"
+          <button
+            onClick={handleBooking}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent/90 text-accent-foreground rounded-full text-base font-bold shadow-2xl hover:shadow-accent/50 transition-all duration-300 hover:scale-105 whitespace-nowrap [&>*]:pointer-events-none"
             data-testid="button-hero-booking"
           >
             <Calendar className="h-5 w-5 flex-shrink-0" />
             <span>{t('hero.cta.book')}</span>
-          </a>
+          </button>
 
           {/* Call Button - Secondary CTA */}
           <a 

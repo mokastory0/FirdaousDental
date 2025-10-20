@@ -16,7 +16,7 @@ export default function Header() {
 
   const doctorName = {
     fr: 'Dr. Firdaous MOUSTAINE',
-    ar: 'د. فردوس موستين',
+    ar: 'د. فردوس موستعين',
     en: 'Dr. Firdaous MOUSTAINE',
   };
 

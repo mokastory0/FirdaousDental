@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import implantImage from '@assets/stock_images/dental_implant_surge_a393fe8d.jpg';
 
 export default function ServiceImplantsPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Implants Dentaires à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'زراعة الأسنان في الدار البيضاء | د. فردوس موستعين',
+      en: 'Dental Implants in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Implants dentaires à Casablanca. Solution permanente pour remplacer les dents manquantes. Taux de succès 95-98%. Consultation gratuite. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'زراعة الأسنان في الدار البيضاء. حل دائم لاستبدال الأسنان المفقودة. معدل نجاح 95-98٪. استشارة مجانية. عيادة د. فردوس موستعين.',
+      en: 'Dental implants in Casablanca. Permanent solution for missing teeth. 95-98% success rate. Free consultation. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'implant dentaire casablanca, implantologie, remplacer dent manquante, implant titane, dentiste casablanca',
+      ar: 'زراعة الأسنان الدار البيضاء, زرع الأسنان, استبدال الأسنان المفقودة',
+      en: 'dental implant casablanca, implantology, replace missing tooth, titanium implant, dentist casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Dental Implants",
+      "description": "Professional dental implant services in Casablanca",
+      "procedureType": "Implantology"
+    }
+  });
 
   const content = {
     fr: {
@@ -51,7 +82,7 @@ export default function ServiceImplantsPage() {
     ar: {
       title: 'زراعة الأسنان في الدار البيضاء',
       subtitle: 'حل دائم لتعويض أسنانك المفقودة',
-      intro1: 'تمثل زراعة الأسنان الحل الأكثر تقدمًا ودوامًا لتعويض سن واحد أو عدة أسنان مفقودة. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نستخدم أحدث الغرسات لنقدم لك نتائج طبيعية ومريحة ودائمة.',
+      intro1: 'تمثل زراعة الأسنان الحل الأكثر تقدمًا ودوامًا لتعويض سن واحد أو عدة أسنان مفقودة. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نستخدم أحدث الغرسات لنقدم لك نتائج طبيعية ومريحة ودائمة.',
       intro2: 'الغرسة السنية هي جذر اصطناعي من التيتانيوم المتوافق حيويًا يُدرج في عظم الفك. تعمل كدعامة قوية للتاج أو الجسر أو طقم الأسنان. يوفر هذا الحل الثوري الثبات والراحة والجمال للأسنان الطبيعية.',
       section1Title: 'ما هي زراعة الأسنان؟',
       section1Text1: 'الغرسة السنية هي برغي من التيتانيوم يحل محل جذر السن المفقود. التيتانيوم مادة متوافقة حيويًا تندمج بشكل طبيعي مع عظم الفك من خلال عملية تسمى التكامل العظمي. بمجرد دمج الغرسة، يمكنها دعم ترميم الأسنان (تاج، جسر أو طقم) لعقود.',

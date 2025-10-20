@@ -30,7 +30,7 @@ export default function Footer() {
 
   const copyright = {
     fr: '© 2025 Cabinet Dentaire Dr. Firdaous MOUSTAINE. Tous droits réservés.',
-    ar: '© ٢٠٢٥ عيادة الأسنان للدكتورة فردوس مستين. جميع الحقوق محفوظة.',
+    ar: '© ٢٠٢٥ عيادة الأسنان للدكتورة فردوس موستعين. جميع الحقوق محفوظة.',
     en: '© 2025 Dr. Firdaous MOUSTAINE Dental Clinic. All rights reserved.',
   };
 

@@ -8,11 +8,48 @@ import { Button } from '@/components/ui/button';
 import { Sparkles, Crown, Anchor, Smile, Braces, Baby, Heart, Stethoscope, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import equipmentImage from '@assets/generated_images/Modern_dental_equipment_technology_344d1782.png';
 
 export default function HomePage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  // SEO Configuration
+  useSEO({
+    title: {
+      fr: 'Cabinet Dentaire Dr. Firdaous MOUSTAINE à Casablanca | Dentiste',
+      ar: 'عيادة الأسنان د. فردوس موستعين في الدار البيضاء | طبيب أسنان',
+      en: 'Dental Clinic Dr. Firdaous MOUSTAINE in Casablanca | Dentist'
+    },
+    description: {
+      fr: 'Cabinet dentaire Dr. Firdaous MOUSTAINE à Casablanca. Blanchiment dentaire, implants, couronnes, orthodontie, soins dentaires pédiatriques. Soins dentaires de qualité avec technologies modernes.',
+      ar: 'عيادة الأسنان د. فردوس موستعين في الدار البيضاء. تبييض الأسنان، زراعة الأسنان، التيجان، تقويم الأسنان، رعاية أسنان الأطفال. رعاية أسنان عالية الجودة بتقنيات حديثة.',
+      en: 'Dental Clinic Dr. Firdaous MOUSTAINE in Casablanca. Teeth whitening, implants, crowns, orthodontics, pediatric dental care. Quality dental care with modern technologies.'
+    },
+    keywords: {
+      fr: 'dentiste casablanca, cabinet dentaire casablanca, dr firdaous moustaine, blanchiment dentaire, implants dentaires, couronnes dentaires, orthodontie casablanca',
+      ar: 'طبيب أسنان الدار البيضاء, عيادة أسنان الدار البيضاء, د. فردوس موستعين, تبييض الأسنان, زراعة الأسنان, تيجان الأسنان',
+      en: 'dentist casablanca, dental clinic casablanca, dr firdaous moustaine, teeth whitening, dental implants, dental crowns, orthodontics casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Cabinet Dentaire Dr. Firdaous MOUSTAINE",
+      "image": "https://couronnedentaire.ma/og-default.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "telephone": "+212520960611",
+      "priceRange": "$$",
+      "url": "https://couronnedentaire.ma",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61568770559363"
+      ]
+    }
+  });
 
   const servicesData = {
     fr: [

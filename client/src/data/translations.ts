@@ -108,7 +108,7 @@ export const translations = {
     'hero.badge': 'عيادة أسنان حديثة في الدار البيضاء',
     'hero.title': 'ابتسامتك، أولويتنا',
     'hero.subtitle': 'رعاية أسنان استثنائية بأحدث التقنيات',
-    'hero.description': 'الدكتورة فردوس مستين وفريقها يرحبون بكم في عيادة حديثة ودافئة — نتحدث',
+    'hero.description': 'الدكتورة فردوس موستعين وفريقها يرحبون بكم في عيادة حديثة ودافئة — نتحدث',
     'hero.languages': 'الفرنسية والعربية والإنجليزية',
     'hero.cta.primary': 'احجز موعد',
     'hero.cta.secondary': 'خدماتنا',
@@ -140,7 +140,7 @@ export const translations = {
     'services.general.desc': 'فحوصات، تنظيف الأسنان، علاج التسوس، علاج الجذور والحالات الطارئة.',
     
     // About
-    'about.title': 'د. فردوس مستين',
+    'about.title': 'د. فردوس موستعين',
     'about.subtitle': 'طبيبة أسنان خبيرة في الدار البيضاء',
     'about.experience': 'سنوات الخبرة',
     'about.patients': 'المرضى المعالجون',
@@ -154,7 +154,7 @@ export const translations = {
     'footer.hours': 'ساعات العمل',
     'footer.hours.mon-fri': 'الإثنين-الجمعة: ٩:٠٠ - ١٧:٠٠',
     'footer.hours.sat': 'السبت: ٩:٠٠ - ١٣:٠٠',
-    'footer.copyright': '© ٢٠٢٥ عيادة د. فردوس مستين. جميع الحقوق محفوظة.',
+    'footer.copyright': '© ٢٠٢٥ عيادة د. فردوس موستعين. جميع الحقوق محفوظة.',
     
     // Contact
     'contact.title': 'اتصل بنا',

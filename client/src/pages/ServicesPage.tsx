@@ -1,9 +1,43 @@
 import ServiceCard from '@/components/ServiceCard';
 import { Sparkles, Crown, Anchor, Smile, Braces, Baby, Heart, Stethoscope } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function ServicesPage() {
   const { language, t } = useLanguage();
+
+  useSEO({
+    title: {
+      fr: 'Nos Services Dentaires à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'خدماتنا السنية في الدار البيضاء | د. فردوس موستعين',
+      en: 'Our Dental Services in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Services dentaires complets à Casablanca: blanchiment, couronnes, implants, orthodontie, soins pédiatriques, parodontologie. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'خدمات أسنان شاملة في الدار البيضاء: تبييض، تيجان، زرع، تقويم، رعاية أطفال. عيادة د. فردوس موستعين.',
+      en: 'Complete dental services in Casablanca: whitening, crowns, implants, orthodontics, pediatric care, periodontics. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'services dentaires casablanca, dentiste casablanca, soins dentaires, blanchiment, implants, orthodontie',
+      ar: 'خدمات أسنان الدار البيضاء, طبيب أسنان, رعاية أسنان',
+      en: 'dental services casablanca, dentist casablanca, dental care, whitening, implants, orthodontics'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Cabinet Dentaire Dr. Firdaous MOUSTAINE",
+      "description": "Complete dental services in Casablanca",
+      "medicalSpecialty": [
+        "Dentistry",
+        "Cosmetic Dentistry",
+        "Orthodontics",
+        "Pediatric Dentistry",
+        "Periodontics",
+        "Prosthodontics",
+        "Implantology"
+      ]
+    }
+  });
 
   const servicesData = {
     fr: [
@@ -165,7 +199,7 @@ export default function ServicesPage() {
     },
     ar: {
       title: 'خدماتنا السنية',
-      subtitle: 'عيادة الأسنان للدكتورة فردوس مستين في الدار البيضاء تقدم مجموعة كاملة من خدمات العناية بالأسنان لجميع أفراد العائلة. من العلاجات الوقائية إلى التدخلات المتخصصة، نحن هنا للعناية بابتسامتك.',
+      subtitle: 'عيادة الأسنان للدكتورة فردوس موستعين في الدار البيضاء تقدم مجموعة كاملة من خدمات العناية بالأسنان لجميع أفراد العائلة. من العلاجات الوقائية إلى التدخلات المتخصصة، نحن هنا للعناية بابتسامتك.',
     },
     en: {
       title: 'Our Dental Services',

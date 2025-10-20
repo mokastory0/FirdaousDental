@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import gumImage from '@assets/stock_images/gum_disease_treatmen_60d08cb9.jpg';
 
 export default function ServiceGumPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Parodontologie à Casablanca | Soins des Gencives | Dr. Firdaous MOUSTAINE',
+      ar: 'علاج اللثة في الدار البيضاء | د. فردوس موستعين',
+      en: 'Periodontics in Casablanca | Gum Care | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Parodontologie à Casablanca. Traitement des maladies des gencives, gingivite, parodontite. Détartrage, curetage. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'علاج اللثة في الدار البيضاء. علاج أمراض اللثة، التهاب اللثة. إزالة الجير، كشط. عيادة د. فردوس موستعين.',
+      en: 'Periodontics in Casablanca. Treatment of gum diseases, gingivitis, periodontitis. Scaling, curettage. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'parodontologie casablanca, maladie des gencives, gingivite, parodontite, détartrage casablanca',
+      ar: 'علاج اللثة الدار البيضاء, أمراض اللثة, التهاب اللثة, إزالة الجير',
+      en: 'periodontics casablanca, gum disease, gingivitis, periodontitis, scaling casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Periodontics",
+      "description": "Professional periodontal services in Casablanca",
+      "procedureType": "Periodontics"
+    }
+  });
 
   const content = {
     fr: {
@@ -51,7 +82,7 @@ export default function ServiceGumPage() {
     ar: {
       title: 'علاج اللثة في الدار البيضاء',
       subtitle: 'أمراض اللثة - صحة اللثة والعظام',
-      intro1: 'أمراض اللثة (أمراض دواعم السن) هي من بين المشاكل الفموية الأكثر شيوعًا ولكن غالبًا ما يتم تجاهلها. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نقدم علاجات متقدمة لأمراض اللثة للوقاية والعلاج والشفاء من أمراض اللثة، وبالتالي حماية أسنانك وصحتك العامة.',
+      intro1: 'أمراض اللثة (أمراض دواعم السن) هي من بين المشاكل الفموية الأكثر شيوعًا ولكن غالبًا ما يتم تجاهلها. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نقدم علاجات متقدمة لأمراض اللثة للوقاية والعلاج والشفاء من أمراض اللثة، وبالتالي حماية أسنانك وصحتك العامة.',
       intro2: 'يعالج طب اللثة الأمراض التي تصيب الأنسجة الداعمة للأسنان: اللثة، العظم السنخي، والرباط اللثوي. التشخيص المبكر والعلاج المناسب يمكن أن ينقذ أسنانك ويمنع مضاعفات خطيرة لصحتك.',
       section1Title: 'أمراض دواعم السن',
       section1Text1: 'تتطور أمراض اللثة على مرحلتين. التهاب اللثة هو المرحلة الأولى: التهاب اللثة الناجم عن تراكم البلاك البكتيري. تشمل الأعراض لثة حمراء ومتورمة ونزيف عند التنظيف. لحسن الحظ، التهاب اللثة قابل للعكس مع العلاج الجيد. التهاب دواعم السن هو المرحلة المتقدمة: عدوى تدمر تدريجيًا العظام والأنسجة الداعمة للأسنان، مما قد يؤدي لفقدانها.',

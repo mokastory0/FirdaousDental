@@ -1,16 +1,48 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronLeft, Crown, Clock, Shield, Star } from 'lucide-react';
+import { ChevronLeft, Crown, Clock, Shield, Star, DollarSign, ArrowRight } from 'lucide-react';
 import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
-import crownImage from '@assets/stock_images/dental_crown_and_bri_75e42c38.jpg';
+import { useSEO } from '@/hooks/useSEO';
+import crownImage from '@assets/generated_images/bridge2.jpeg';
 
 export default function ServiceCrownsPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // SEO Configuration
+  useSEO({
+    title: {
+      fr: 'Couronnes et Bridges Dentaires à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'التيجان والجسور السنية في الدار البيضاء | د. فردوس موستعين',
+      en: 'Dental Crowns and Bridges in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Couronnes dentaires à Casablanca: 3000-5000 DH. Couronnes céramique, zircone, céramo-métallique. Bridges dentaires de qualité. Devis gratuit. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'تيجان الأسنان في الدار البيضاء: 3000-5000 درهم. تيجان سيراميك، زركونيا. جسور أسنان عالية الجودة. عرض مجاني. عيادة د. فردوس موستعين.',
+      en: 'Dental crowns in Casablanca: 3000-5000 MAD. Ceramic, zirconia, porcelain-fused-to-metal crowns. Quality dental bridges. Free quote. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'couronne dentaire casablanca, prix couronne dentaire, bridge dentaire, couronne céramique, couronne zircone, dentiste casablanca',
+      ar: 'تاج الأسنان الدار البيضاء, سعر تاج الأسنان, جسر الأسنان, تاج سيراميك, تاج زركونيا',
+      en: 'dental crown casablanca, crown price, dental bridge, ceramic crown, zirconia crown, dentist casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Dental Crown and Bridge",
+      "description": "Professional dental crown and bridge services in Casablanca",
+      "procedureType": "Restorative Dentistry"
+    }
+  });
 
   const content = {
     fr: {
@@ -44,6 +76,9 @@ export default function ServiceCrownsPage() {
       faq3A: 'Une couronne recouvre une seule dent existante pour la protéger et la restaurer. Un bridge remplace une ou plusieurs dents manquantes en s\'appuyant sur les dents adjacentes qui reçoivent des couronnes.',
       faq4Q: 'La couronne se voit-elle ?',
       faq4A: 'Nos couronnes en céramique sont fabriquées pour être parfaitement esthétiques et s\'harmoniser avec vos dents naturelles. Personne ne pourra voir que vous portez une couronne, même de très près.',
+      pricingTitle: 'Combien coûte une couronne dentaire ?',
+      pricingText: 'Découvrez nos tarifs transparents : 3000-5000 DH selon le matériau. Guide complet des prix des couronnes et bridges à Casablanca.',
+      pricingButton: 'Voir les Tarifs Détaillés',
       ctaTitle: 'Restaurez votre sourire avec des couronnes de qualité',
       ctaText: 'Prenez rendez-vous pour une consultation personnalisée à Casablanca',
       ctaButton: 'Prendre Rendez-vous',
@@ -51,7 +86,7 @@ export default function ServiceCrownsPage() {
     ar: {
       title: 'التيجان والجسور السنية في الدار البيضاء',
       subtitle: 'ترميم الأسنان عالي الجودة لابتسامة كاملة',
-      intro1: 'التيجان والجسور السنية هي حلول ترميم أسنان مثبتة تسمح بإصلاح أو استبدال الأسنان التالفة أو المفقودة. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نستخدم أحدث المواد والتقنيات المتقدمة لنقدم لك ترميمات متينة وجمالية ووظيفية.',
+      intro1: 'التيجان والجسور السنية هي حلول ترميم أسنان مثبتة تسمح بإصلاح أو استبدال الأسنان التالفة أو المفقودة. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نستخدم أحدث المواد والتقنيات المتقدمة لنقدم لك ترميمات متينة وجمالية ووظيفية.',
       intro2: 'التاج السني هو تركيبة ثابتة تغطي السن التالف أو الضعيف أو المعالج بالحشو العصبي بالكامل. يحمي السن مع استعادة شكله ووظيفته وجماليته. أما الجسر السني، فهو حل يسمح باستبدال سن أو عدة أسنان مفقودة بالاستناد على الأسنان المجاورة.',
       section1Title: 'ما هو التاج السني؟',
       section1Text1: 'التاج السني هو تركيبة على شكل سن تغطي الجزء المرئي من السن الطبيعي بالكامل. يُستخدم في عدة حالات: سن مكسور أو متشقق، سن متسوس فقد جزءًا كبيرًا من بنيته، سن معالج عصبيًا أصبح ضعيفًا، أو ببساطة لتحسين مظهر سن متغير اللون أو مشوه.',
@@ -79,6 +114,9 @@ export default function ServiceCrownsPage() {
       faq3A: 'التاج يغطي سنًا واحدًا موجودًا لحمايته وترميمه. الجسر يستبدل سنًا أو عدة أسنان مفقودة بالاستناد على الأسنان المجاورة التي تتلقى تيجانًا.',
       faq4Q: 'هل يظهر التاج؟',
       faq4A: 'تيجاننا من السيراميك مصنوعة لتكون جمالية تمامًا ومتناسقة مع أسنانك الطبيعية. لن يتمكن أحد من رؤية أنك ترتدي تاجًا، حتى عن قرب.',
+      pricingTitle: 'كم يكلف التاج السني؟',
+      pricingText: 'اكتشف أسعارنا الشفافة: 3000-5000 درهم حسب المادة. دليل كامل لأسعار التيجان والجسور في الدار البيضاء.',
+      pricingButton: 'عرض الأسعار التفصيلية',
       ctaTitle: 'استعد ابتسامتك بتيجان عالية الجودة',
       ctaText: 'احجز موعدًا لاستشارة شخصية في الدار البيضاء',
       ctaButton: 'احجز موعد',
@@ -114,6 +152,9 @@ export default function ServiceCrownsPage() {
       faq3A: 'A crown covers a single existing tooth to protect and restore it. A bridge replaces one or more missing teeth by relying on adjacent teeth that receive crowns.',
       faq4Q: 'Is the crown visible?',
       faq4A: 'Our ceramic crowns are crafted to be perfectly aesthetic and blend with your natural teeth. No one will be able to see you\'re wearing a crown, even up close.',
+      pricingTitle: 'How much does a dental crown cost?',
+      pricingText: 'Discover our transparent pricing: 3000-5000 MAD depending on material. Complete guide to crown and bridge prices in Casablanca.',
+      pricingButton: 'View Detailed Pricing',
       ctaTitle: 'Restore your smile with quality crowns',
       ctaText: 'Book an appointment for a personalized consultation in Casablanca',
       ctaButton: 'Book Appointment',
@@ -151,6 +192,30 @@ export default function ServiceCrownsPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">{c.intro1}</p>
             <p className="text-muted-foreground leading-relaxed">{c.intro2}</p>
           </section>
+
+          {/* Prominent Pricing CTA Card */}
+          <Link href={localizePath('services/crowns/pricing')}>
+            <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardContent className="pt-6">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                      {c.pricingTitle}
+                      <span className="text-primary text-xl">3000-5000 DH</span>
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{c.pricingText}</p>
+                    <Button variant="default" className="gap-2 font-semibold">
+                      {c.pricingButton}
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
 
           <section>
             <h2 className="text-3xl font-bold mb-6">{c.section1Title}</h2>

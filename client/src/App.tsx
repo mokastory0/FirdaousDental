@@ -22,8 +22,10 @@ import NotFound from "@/pages/not-found";
 
 // Task 9.2: Lazy load service pages for better performance
 const ServiceWhiteningPage = lazy(() => import("@/pages/ServiceWhiteningPage"));
+const WhiteningPricingPage = lazy(() => import("@/pages/WhiteningPricingPage"));
 const ServicePediatricPage = lazy(() => import("@/pages/ServicePediatricPage"));
 const ServiceCrownsPage = lazy(() => import("@/pages/ServiceCrownsPage"));
+const CrownPricingPage = lazy(() => import("@/pages/CrownPricingPage"));
 const ServiceImplantsPage = lazy(() => import("@/pages/ServiceImplantsPage"));
 const ServiceDenturesPage = lazy(() => import("@/pages/ServiceDenturesPage"));
 const ServiceOrthodonticsPage = lazy(() => import("@/pages/ServiceOrthodonticsPage"));
@@ -50,6 +52,13 @@ function Router() {
           </Suspense>
         )}
       </Route>
+      <Route path="/:lang/services/whitening/pricing">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <WhiteningPricingPage />
+          </Suspense>
+        )}
+      </Route>
       <Route path="/:lang/services/pediatric">
         {() => (
           <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
@@ -61,6 +70,13 @@ function Router() {
         {() => (
           <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
             <ServiceCrownsPage />
+          </Suspense>
+        )}
+      </Route>
+      <Route path="/:lang/services/crowns/pricing">
+        {() => (
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div></div>}>
+            <CrownPricingPage />
           </Suspense>
         )}
       </Route>

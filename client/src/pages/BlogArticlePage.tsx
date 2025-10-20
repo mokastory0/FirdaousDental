@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronLeft, Calendar, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import { blogArticles } from '@/data/blogArticles';
 
 export default function BlogArticlePage() {
@@ -12,6 +13,39 @@ export default function BlogArticlePage() {
   const articleId = params?.id;
 
   const article = articleId && blogArticles[articleId] ? blogArticles[articleId][language] : null;
+
+  useSEO({
+    title: {
+      fr: article ? `${article.title} | Blog Dentaire Casablanca` : 'Article | Blog Dentaire',
+      ar: article ? `${article.title} | مدونة الأسنان` : 'مقال | مدونة الأسنان',
+      en: article ? `${article.title} | Dental Blog Casablanca` : 'Article | Dental Blog'
+    },
+    description: {
+      fr: article ? article.excerpt : 'Article du blog dentaire',
+      ar: article ? article.excerpt : 'مقال من مدونة الأسنان',
+      en: article ? article.excerpt : 'Dental blog article'
+    },
+    keywords: {
+      fr: article ? `${article.category}, blog dentaire, conseils dentaires, casablanca` : 'blog dentaire',
+      ar: article ? `${article.category}, مدونة أسنان` : 'مدونة أسنان',
+      en: article ? `${article.category}, dental blog, dental tips, casablanca` : 'dental blog'
+    },
+    schema: article ? {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": article.title,
+      "description": article.excerpt,
+      "datePublished": article.date,
+      "author": {
+        "@type": "Person",
+        "name": "Dr. Firdaous MOUSTAINE"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Cabinet Dentaire Dr. Firdaous MOUSTAINE"
+      }
+    } : undefined
+  });
 
   if (!article) {
     return (
@@ -69,7 +103,7 @@ export default function BlogArticlePage() {
             </h3>
             <p className="text-muted-foreground mb-6">
               {language === 'ar' 
-                ? 'هل لديك أسئلة حول صحة أسنانك؟ احجز موعدًا للاستشارة مع الدكتورة فردوس مستين.'
+                ? 'هل لديك أسئلة حول صحة أسنانك؟ احجز موعدًا للاستشارة مع الدكتورة فردوس موستعين.'
                 : language === 'fr'
                 ? 'Vous avez des questions sur votre santé dentaire ? Prenez rendez-vous pour une consultation avec Dr. Firdaous MOUSTAINE.'
                 : 'Have questions about your dental health? Book an appointment for a consultation with Dr. Firdaous MOUSTAINE.'}

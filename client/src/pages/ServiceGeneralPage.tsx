@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import generalImage from '@assets/stock_images/general_dental_check_ef0946c1.jpg';
 
 export default function ServiceGeneralPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Soins Dentaires Généraux à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'رعاية أسنان عامة في الدار البيضاء | د. فردوس موستعين',
+      en: 'General Dental Care in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Soins dentaires généraux à Casablanca. Examens, détartrage, caries, extractions, urgences dentaires. Prévention et traitements. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'رعاية أسنان عامة في الدار البيضاء. فحوصات، إزالة الجير، تسوس، قلع، طوارئ أسنان. وقاية وعلاجات. عيادة د. فردوس موستعين.',
+      en: 'General dental care in Casablanca. Exams, scaling, cavities, extractions, dental emergencies. Prevention and treatments. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'dentiste casablanca, soins dentaires, détartrage, caries, extraction dentaire, urgence dentaire casablanca',
+      ar: 'طبيب أسنان الدار البيضاء, رعاية أسنان, إزالة الجير, تسوس, قلع أسنان',
+      en: 'dentist casablanca, dental care, scaling, cavities, tooth extraction, dental emergency casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "General Dentistry",
+      "description": "Professional general dental services in Casablanca",
+      "procedureType": "General Dentistry"
+    }
+  });
 
   const content = {
     fr: {
@@ -51,7 +82,7 @@ export default function ServiceGeneralPage() {
     ar: {
       title: 'طب الأسنان العام في الدار البيضاء',
       subtitle: 'عناية أسنان كاملة لجميع أفراد العائلة',
-      intro1: 'يشكل طب الأسنان العام أساس صحة فمك. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نقدم مجموعة كاملة من خدمات العناية بالأسنان الوقائية والعلاجية للحفاظ على ابتسامتك في صحة ممتازة. من الفحص الروتيني إلى علاج التسوس، نعتني بجميع أفراد عائلتك.',
+      intro1: 'يشكل طب الأسنان العام أساس صحة فمك. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نقدم مجموعة كاملة من خدمات العناية بالأسنان الوقائية والعلاجية للحفاظ على ابتسامتك في صحة ممتازة. من الفحص الروتيني إلى علاج التسوس، نعتني بجميع أفراد عائلتك.',
       intro2: 'نهجنا الوقائي يهدف لاكتشاف ومعالجة مشاكل الأسنان قبل أن تصبح خطيرة. الزيارات المنتظمة والعناية المناسبة تسمح لك بتجنب العلاجات المعقدة والمكلفة، مع الحفاظ على أسنانك الطبيعية أطول فترة ممكنة.',
       section1Title: 'الفحوصات والوقاية',
       section1Text1: 'فحص الأسنان الروتيني ضروري للحفاظ على صحة فموية جيدة. نوصي بزيارة كل ٦ أشهر لفحص كامل. خلال زيارتك، نجري فحصًا سريريًا دقيقًا لأسنانك ولثتك وأغشيتك المخاطية، نأخذ أشعة إذا لزم الأمر لكشف التسوس غير المرئي بالعين المجردة، نقوم بإزالة الجير المهنية لإزالة البلاك والجير، نطبق الفلورايد لتقوية المينا، ونقدم لك نصائح مخصصة لنظافة الفم.',

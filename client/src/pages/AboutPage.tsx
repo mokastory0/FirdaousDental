@@ -1,20 +1,55 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSEO } from '@/hooks/useSEO';
 import { Award, Calendar, Users, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import doctorImage from '@assets/generated_images/Female_dentist_professional_portrait_0f9ebea2.png';
+import doctorImage from '@assets/cabinet/firdaouse.jpg';
 import equipmentImage from '@assets/generated_images/Modern_dental_equipment_technology_344d1782.png';
 
 export default function AboutPage() {
   const { language, t } = useLanguage();
 
+  useSEO({
+    title: {
+      fr: 'À Propos - Dr. Firdaous MOUSTAINE | Dentiste à Casablanca',
+      ar: 'عنا - د. فردوس موستعين | طبيب أسنان في الدار البيضاء',
+      en: 'About - Dr. Firdaous MOUSTAINE | Dentist in Casablanca'
+    },
+    description: {
+      fr: 'Découvrez Dr. Firdaous MOUSTAINE, dentiste expérimentée à Casablanca. Diplômée de la Faculté de Médecine Dentaire. Cabinet moderne avec équipement de pointe.',
+      ar: 'تعرف على د. فردوس موستعين، طبيبة أسنان ذات خبرة في الدار البيضاء. خريجة كلية طب الأسنان. عيادة حديثة بمعدات متطورة.',
+      en: 'Meet Dr. Firdaous MOUSTAINE, experienced dentist in Casablanca. Graduate of Faculty of Dental Medicine. Modern clinic with state-of-the-art equipment.'
+    },
+    keywords: {
+      fr: 'dr firdaous moustaine, dentiste casablanca, cabinet dentaire casablanca, dentiste expérimentée, faculté médecine dentaire',
+      ar: 'د. فردوس موستعين, طبيب أسنان الدار البيضاء, عيادة أسنان',
+      en: 'dr firdaous moustaine, dentist casablanca, dental clinic casablanca, experienced dentist'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Firdaous MOUSTAINE",
+      "jobTitle": "Dentist",
+      "worksFor": {
+        "@type": "Dentist",
+        "name": "Cabinet Dentaire Dr. Firdaous MOUSTAINE"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "alumniOf": "Faculté de Médecine Dentaire de Casablanca"
+    }
+  });
+
   const content = {
     fr: {
       section1Title: 'Une Expertise au Service de Votre Sourire',
-      section1Para1: 'Dr. Firdaous MOUSTAINE est une dentiste expérimentée et passionnée, exerçant à Casablanca. Avec plus de 15 ans d\'expérience, elle s\'est spécialisée dans les soins dentaires complets, de la dentisterie esthétique aux traitements complexes.',
+      section1Para1: 'Dr. Firdaous MOUSTAINE est une dentiste expérimentée et passionnée, exerçant à Casablanca. Avec une grande expérience, elle s\'est spécialisée dans les soins dentaires complets, de la dentisterie esthétique aux traitements complexes.',
       section1Para2: 'Diplômée de la Faculté de Médecine Dentaire de Casablanca, Dr. MOUSTAINE continue de se former aux dernières techniques et technologies pour offrir à ses patients les meilleurs soins possibles.',
       section1Para3: 'Sa philosophie ? Allier expertise technique et approche humaine pour créer une expérience de soins dentaires positive et sans stress pour tous ses patients.',
-      stat1: 'Années d\'expérience',
-      stat2: 'Patients traités',
+      stat1: 'Grande Expérience',
+      stat2: 'Patients Ravis',
       stat3: 'Note Google',
       stat4: 'Satisfaction',
       section2Title: 'Équipement Moderne',
@@ -32,11 +67,11 @@ export default function AboutPage() {
     },
     ar: {
       section1Title: 'خبرة في خدمة ابتسامتك',
-      section1Para1: 'الدكتورة فردوس مستين طبيبة أسنان ذات خبرة وشغف، تمارس في الدار البيضاء. مع أكثر من ١٥ عامًا من الخبرة، تخصصت في العناية الشاملة بالأسنان، من طب الأسنان التجميلي إلى العلاجات المعقدة.',
-      section1Para2: 'خريجة كلية طب الأسنان بالدار البيضاء، تواصل الدكتورة مستين التدريب على أحدث التقنيات والتكنولوجيا لتقديم أفضل رعاية ممكنة لمرضاها.',
+      section1Para1: 'الدكتورة فردوس موستعين طبيبة أسنان ذات خبرة وشغف، تمارس في الدار البيضاء. مع خبرة كبيرة، تخصصت في العناية الشاملة بالأسنان، من طب الأسنان التجميلي إلى العلاجات المعقدة.',
+      section1Para2: 'خريجة كلية طب الأسنان بالدار البيضاء، تواصل الدكتورة موستعين التدريب على أحدث التقنيات والتكنولوجيا لتقديم أفضل رعاية ممكنة لمرضاها.',
       section1Para3: 'فلسفتها؟ الجمع بين الخبرة التقنية والنهج الإنساني لخلق تجربة رعاية أسنان إيجابية وخالية من التوتر لجميع مرضاها.',
-      stat1: 'سنوات الخبرة',
-      stat2: 'المرضى المعالجون',
+      stat1: 'خبرة كبيرة',
+      stat2: 'مرضى سعداء',
       stat3: 'تقييم جوجل',
       stat4: 'الرضا',
       section2Title: 'معدات حديثة',
@@ -54,11 +89,11 @@ export default function AboutPage() {
     },
     en: {
       section1Title: 'Expertise at the Service of Your Smile',
-      section1Para1: 'Dr. Firdaous MOUSTAINE is an experienced and passionate dentist practicing in Casablanca. With over 15 years of experience, she has specialized in comprehensive dental care, from cosmetic dentistry to complex treatments.',
+      section1Para1: 'Dr. Firdaous MOUSTAINE is an experienced and passionate dentist practicing in Casablanca. With great experience, she has specialized in comprehensive dental care, from cosmetic dentistry to complex treatments.',
       section1Para2: 'A graduate of the Faculty of Dental Medicine in Casablanca, Dr. MOUSTAINE continues to train in the latest techniques and technologies to offer her patients the best possible care.',
       section1Para3: 'Her philosophy? Combining technical expertise with a human approach to create a positive and stress-free dental care experience for all her patients.',
-      stat1: 'Years of experience',
-      stat2: 'Patients treated',
+      stat1: 'Great Experience',
+      stat2: 'Happy Patients',
       stat3: 'Google rating',
       stat4: 'Satisfaction',
       section2Title: 'Modern Equipment',
@@ -109,21 +144,21 @@ export default function AboutPage() {
               <Card>
                 <CardContent className="pt-6 text-center">
                   <Calendar className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold" dir="ltr">15+</div>
+                  <div className="text-2xl font-bold">✓</div>
                   <div className="text-sm text-muted-foreground">{c.stat1}</div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="pt-6 text-center">
                   <Users className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold" dir="ltr">1000+</div>
+                  <div className="text-2xl font-bold">😊</div>
                   <div className="text-sm text-muted-foreground">{c.stat2}</div>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent className="pt-6 text-center">
                   <Award className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <div className="text-2xl font-bold" dir="ltr">4.8★</div>
+                  <div className="text-2xl font-bold" dir="ltr">5.0★</div>
                   <div className="text-sm text-muted-foreground">{c.stat3}</div>
                 </CardContent>
               </Card>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import orthodonticsImage from '@assets/stock_images/orthodontic_braces_i_c9d6fe24.jpg';
 
 export default function ServiceOrthodonticsPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Orthodontie à Casablanca | Invisalign | Dr. Firdaous MOUSTAINE',
+      ar: 'تقويم الأسنان في الدار البيضاء | إنفيزالين | د. فردوس موستعين',
+      en: 'Orthodontics in Casablanca | Invisalign | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Orthodontie à Casablanca. Invisalign, appareils dentaires pour enfants et adultes. Alignement dentaire invisible et efficace. Consultation gratuite. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'تقويم الأسنان في الدار البيضاء. إنفيزالين، تقويم للأطفال والبالغين. محاذاة أسنان غير مرئية وفعالة. استشارة مجانية.',
+      en: 'Orthodontics in Casablanca. Invisalign, braces for children and adults. Invisible and effective teeth alignment. Free consultation. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'orthodontie casablanca, invisalign, appareil dentaire, alignement dentaire, orthodontiste casablanca',
+      ar: 'تقويم الأسنان الدار البيضاء, إنفيزالين, تقويم الأسنان, محاذاة الأسنان',
+      en: 'orthodontics casablanca, invisalign, braces, teeth alignment, orthodontist casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Orthodontics",
+      "description": "Professional orthodontic services in Casablanca",
+      "procedureType": "Orthodontics"
+    }
+  });
 
   const content = {
     fr: {
@@ -51,7 +82,7 @@ export default function ServiceOrthodonticsPage() {
     ar: {
       title: 'تقويم الأسنان في الدار البيضاء',
       subtitle: 'رتب أسنانك لابتسامة متناسقة',
-      intro1: 'تقويم الأسنان هو التخصص السني الذي يصحح سوء وضع الأسنان وتشوهات نمو الفكين. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نقدم حلول تقويم أسنان حديثة وسرية لجميع الأعمار، من الأطفال إلى البالغين.',
+      intro1: 'تقويم الأسنان هو التخصص السني الذي يصحح سوء وضع الأسنان وتشوهات نمو الفكين. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نقدم حلول تقويم أسنان حديثة وسرية لجميع الأعمار، من الأطفال إلى البالغين.',
       intro2: 'سواء كنت تعاني من أسنان غير متراصة، أو ازدحام سني، أو فراغات بين الأسنان، أو مشاكل إطباق، لدينا الحل المناسب. علاجات تقويم الأسنان لدينا تحسن ليس فقط جمالية ابتسامتك، بل أيضًا صحة فمك ووظيفة المضغ.',
       section1Title: 'لماذا تقويم الأسنان؟',
       section1Text1: 'الترصيف السني الجيد ضروري لعدة أسباب. الأسنان المتراصة جيدًا أسهل في التنظيف، مما يقلل من خطر التسوس وأمراض اللثة. الإطباق الصحيح يمنع التآكل المبكر للأسنان وآلام الفك ومشاكل المفصل الفكي الصدغي. أخيرًا، الابتسامة المتناسقة تحسن ثقتك بنفسك وجودة حياتك.',

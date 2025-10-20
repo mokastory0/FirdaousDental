@@ -1,16 +1,48 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { ChevronLeft, Sparkles } from 'lucide-react';
+import { ChevronLeft, Sparkles, DollarSign, ArrowRight } from 'lucide-react';
 import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import teethWhiteningImage from '@assets/generated_images/Teeth_whitening_bright_smile_ca666386.png';
 
 export default function ServiceWhiteningPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // SEO Configuration
+  useSEO({
+    title: {
+      fr: 'Blanchiment Dentaire à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'تبييض الأسنان في الدار البيضاء | د. فردوس موستعين',
+      en: 'Teeth Whitening in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Blanchiment dentaire professionnel à Casablanca: 3000-4500 DH. Technique LED et laser. Résultats immédiats, sourire éclatant. Devis gratuit. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'تبييض أسنان احترافي في الدار البيضاء: 3000-4500 درهم. تقنية LED وليزر. نتائج فورية، ابتسامة مشرقة. عرض مجاني. عيادة د. فردوس موستعين.',
+      en: 'Professional teeth whitening in Casablanca: 3000-4500 MAD. LED and laser technique. Immediate results, bright smile. Free quote. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'blanchiment dentaire casablanca, prix blanchiment dentaire, blanchiment professionnel, blanchiment laser, dentiste casablanca',
+      ar: 'تبييض الأسنان الدار البيضاء, سعر تبييض الأسنان, تبييض احترافي, تبييض بالليزر',
+      en: 'teeth whitening casablanca, whitening price, professional whitening, laser whitening, dentist casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Teeth Whitening",
+      "description": "Professional teeth whitening services in Casablanca",
+      "procedureType": "Cosmetic Dentistry"
+    }
+  });
 
   const content = {
     fr: {
@@ -44,6 +76,10 @@ export default function ServiceWhiteningPage() {
       faq3A: 'Le blanchiment est déconseillé aux femmes enceintes ou allaitantes, aux personnes avec des caries non traitées, des maladies de gencives actives, ou une sensibilité dentaire sévère. Une consultation préalable permet de déterminer si vous êtes un bon candidat.',
       faq4Q: 'Le blanchiment fonctionne-t-il sur toutes les dents ?',
       faq4A: 'Le blanchiment est plus efficace sur les dents naturelles jaunies. Il ne fonctionne pas sur les couronnes, facettes ou plombages. Si vous avez des restaurations visibles, nous discuterons des options pour harmoniser la couleur de votre sourire.',
+      imageAlt: 'Blanchiment dentaire professionnel à Casablanca',
+      pricingTitle: 'Combien coûte un blanchiment dentaire ?',
+      pricingText: 'Découvrez nos tarifs transparents : 3000-4500 DH selon la technique. Guide complet des prix du blanchiment dentaire à Casablanca.',
+      pricingButton: 'Voir les Tarifs Détaillés',
       ctaTitle: 'Obtenez un sourire éclatant dès aujourd\'hui',
       ctaText: 'Consultation gratuite pour votre blanchiment dentaire à Casablanca',
       ctaButton: 'Prendre Rendez-vous',
@@ -51,7 +87,7 @@ export default function ServiceWhiteningPage() {
     ar: {
       title: 'تبييض الأسنان في الدار البيضاء',
       subtitle: 'ابتسامة مشرقة بتقنياتنا المهنية',
-      intro1: 'تبييض الأسنان هو علاج تجميلي محترف يسمح بتفتيح اللون الطبيعي لأسنانك بعدة درجات. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نستخدم تقنيات آمنة وفعالة لنقدم لك ابتسامة أكثر بياضًا وإشراقًا بكل أمان.',
+      intro1: 'تبييض الأسنان هو علاج تجميلي محترف يسمح بتفتيح اللون الطبيعي لأسنانك بعدة درجات. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نستخدم تقنيات آمنة وفعالة لنقدم لك ابتسامة أكثر بياضًا وإشراقًا بكل أمان.',
       intro2: 'يعمل العلاج على البقع والتلون الناجم عن القهوة والشاي والتبغ والنبيذ الأحمر والشيخوخة الطبيعية للأسنان. على عكس المنتجات المتاحة بدون وصفة طبية، يقدم تبييضنا المهني نتائج مرئية وسريعة ودائمة، تحت إشراف متخصص صحي.',
       section1Title: 'لماذا تختار التبييض المهني؟',
       section1Text1: 'تبييض الأسنان المهني هو الطريقة الأكثر أمانًا وفعالية لتفتيح أسنانك. المنتجات التي نستخدمها تحتوي على تركيز من بيروكسيد الهيدروجين أو الكارباميد أعلى بكثير من أدوات التبييض المنزلية، مما يسمح بنتائج مذهلة في جلسة واحدة. معداتنا الحديثة مع مصباح LED تسرع العملية مع حماية لثتك.',
@@ -79,6 +115,10 @@ export default function ServiceWhiteningPage() {
       faq3A: 'التبييض غير موصى به للنساء الحوامل أو المرضعات، الأشخاص الذين لديهم تسوس غير معالج، أمراض لثة نشطة، أو حساسية أسنان شديدة. تسمح الاستشارة المسبقة بتحديد ما إذا كنت مرشحًا جيدًا.',
       faq4Q: 'هل يعمل التبييض على جميع الأسنان؟',
       faq4A: 'التبييض أكثر فعالية على الأسنان الطبيعية المصفرة. لا يعمل على التيجان أو القشور أو الحشوات. إذا كان لديك ترميمات مرئية، سنناقش الخيارات لتوحيد لون ابتسامتك.',
+      imageAlt: 'تبييض أسنان احترافي في الدار البيضاء',
+      pricingTitle: 'كم يكلف تبييض الأسنان؟',
+      pricingText: 'اكتشف أسعارنا الشفافة: 3000-4500 درهم حسب التقنية. دليل كامل لأسعار تبييض الأسنان في الدار البيضاء.',
+      pricingButton: 'عرض الأسعار التفصيلية',
       ctaTitle: 'احصل على ابتسامة مشرقة اليوم',
       ctaText: 'استشارة مجانية لتبييض أسنانك في الدار البيضاء',
       ctaButton: 'احجز موعد',
@@ -114,6 +154,10 @@ export default function ServiceWhiteningPage() {
       faq3A: 'Whitening is not recommended for pregnant or breastfeeding women, people with untreated cavities, active gum disease, or severe tooth sensitivity. A preliminary consultation determines if you\'re a good candidate.',
       faq4Q: 'Does whitening work on all teeth?',
       faq4A: 'Whitening is most effective on yellowed natural teeth. It doesn\'t work on crowns, veneers or fillings. If you have visible restorations, we\'ll discuss options to harmonize your smile color.',
+      imageAlt: 'Professional teeth whitening in Casablanca',
+      pricingTitle: 'How much does teeth whitening cost?',
+      pricingText: 'Discover our transparent pricing: 3000-4500 MAD depending on technique. Complete guide to teeth whitening prices in Casablanca.',
+      pricingButton: 'View Detailed Pricing',
       ctaTitle: 'Get a bright smile today',
       ctaText: 'Free consultation for your teeth whitening in Casablanca',
       ctaButton: 'Book Appointment',
@@ -156,6 +200,30 @@ export default function ServiceWhiteningPage() {
             <p className="text-muted-foreground leading-relaxed mb-4">{c.intro1}</p>
             <p className="text-muted-foreground leading-relaxed">{c.intro2}</p>
           </section>
+
+          {/* Prominent Pricing CTA Card */}
+          <Link href={localizePath('services/whitening/pricing')}>
+            <Card className="border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer bg-gradient-to-br from-primary/5 to-accent/5">
+              <CardContent className="pt-6">
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                  <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="h-8 w-8 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                      {c.pricingTitle}
+                      <span className="text-primary text-xl">3000-4500 DH</span>
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">{c.pricingText}</p>
+                    <Button variant="default" className="gap-2 font-semibold">
+                      {c.pricingButton}
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
 
           <section>
             <h2 className="text-3xl font-bold mb-6">{c.section1Title}</h2>

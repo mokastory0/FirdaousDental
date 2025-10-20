@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import pediatricImage from '@assets/generated_images/Pediatric_dentistry_happy_child_aed6da30.png';
 
 export default function ServicePediatricPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Dentisterie Pédiatrique à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'طب أسنان الأطفال في الدار البيضاء | د. فردوس موستعين',
+      en: 'Pediatric Dentistry in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Dentiste pédiatrique à Casablanca. Soins dentaires pour enfants dans un environnement bienveillant. Prévention, caries, fluor. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'طبيب أسنان أطفال في الدار البيضاء. رعاية أسنان للأطفال في بيئة رعاية. وقاية، تسوس، فلور. عيادة د. فردوس موستعين.',
+      en: 'Pediatric dentist in Casablanca. Dental care for children in a caring environment. Prevention, cavities, fluoride. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'dentiste pédiatrique casablanca, dentiste enfant, soins dentaires enfants, pédodontie casablanca',
+      ar: 'طبيب أسنان أطفال الدار البيضاء, طبيب أسنان للأطفال, رعاية أسنان الأطفال',
+      en: 'pediatric dentist casablanca, children dentist, dental care children, pedodontics casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Pediatric Dentistry",
+      "description": "Professional pediatric dental services in Casablanca",
+      "procedureType": "Pediatric Dentistry"
+    }
+  });
 
   const content = {
     fr: {
@@ -53,7 +84,7 @@ export default function ServicePediatricPage() {
       title: 'طب أسنان الأطفال - طبيب أسنان للأطفال',
       subtitle: 'رعاية أسنان متخصصة للأطفال في بيئة مطمئنة',
       intro1: 'طب أسنان الأطفال هو التخصص السني المخصص لرعاية الأطفال من الولادة حتى المراهقة. تقدم عيادتنا في الدار البيضاء بيئة ترحيبية ومطمئنة لجعل كل زيارة تجربة إيجابية لطفلك.',
-      intro2: 'تتبنى الدكتورة فردوس مستين نهجًا لطيفًا وصبورًا، مكيفًا مع كل طفل. نأخذ الوقت الكافي لشرح كل خطوة بكلمات بسيطة ومطمئنة لبناء علاقة ثقة دائمة مع طفلك.',
+      intro2: 'تتبنى الدكتورة فردوس موستعين نهجًا لطيفًا وصبورًا، مكيفًا مع كل طفل. نأخذ الوقت الكافي لشرح كل خطوة بكلمات بسيطة ومطمئنة لبناء علاقة ثقة دائمة مع طفلك.',
       section1Title: 'طب أسنان الأطفال في الدار البيضاء',
       section1Text1: 'يجمع نهجنا في طب الأطفال بين الخبرة الطبية وعلم نفس الطفل. كل استشارة مكيفة مع عمر ومستوى فهم طفلك. نستخدم تقنيات تواصل مرحة وتفسيرات مناسبة لتحويل زيارة طبيب الأسنان إلى لحظة إيجابية.',
       section1Text2: 'بيئة العيادة مصممة لطمأنة الأطفال: ديكور ملون، ألعاب، مكافآت بعد كل زيارة. فريقنا مدرب خصيصًا للتعامل مع قلق الأطفال وخلق جو مريح يعزز تعاون الطفل.',

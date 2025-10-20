@@ -3,9 +3,45 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from 'lucide-reac
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function ContactPage() {
   const { language, t } = useLanguage();
+
+  useSEO({
+    title: {
+      fr: 'Contact - Prendre Rendez-vous | Cabinet Dentaire Casablanca',
+      ar: 'اتصل - حجز موعد | عيادة أسنان الدار البيضاء',
+      en: 'Contact - Book Appointment | Dental Clinic Casablanca'
+    },
+    description: {
+      fr: 'Contactez le Cabinet Dentaire Dr. Firdaous MOUSTAINE à Casablanca. Tél: +212520960611. Bd Brahim Roudani. Prenez rendez-vous en ligne. Urgences acceptées.',
+      ar: 'اتصل بعيادة الأسنان د. فردوس موستعين في الدار البيضاء. هاتف: +212520960611. احجز موعدًا عبر الإنترنت. طوارئ مقبولة.',
+      en: 'Contact Cabinet Dentaire Dr. Firdaous MOUSTAINE in Casablanca. Tel: +212520960611. Bd Brahim Roudani. Book appointment online. Emergencies accepted.'
+    },
+    keywords: {
+      fr: 'contact dentiste casablanca, prendre rendez-vous dentiste, urgence dentaire casablanca, cabinet dentaire casablanca, dr firdaous moustaine',
+      ar: 'اتصل طبيب أسنان الدار البيضاء, حجز موعد طبيب أسنان, طوارئ أسنان',
+      en: 'contact dentist casablanca, book dentist appointment, dental emergency casablanca, dental clinic casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Dentist",
+        "name": "Cabinet Dentaire Dr. Firdaous MOUSTAINE",
+        "telephone": "+212520960611",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Immeuble 3, étage 2, Numéro 7, Résidence Nadia, 13 Bd Brahim Roudani",
+          "addressLocality": "Casablanca",
+          "postalCode": "20390",
+          "addressCountry": "MA"
+        },
+        "openingHours": "Mo-Fr 09:00-17:00, Sa 09:00-13:00"
+      }
+    }
+  });
 
   const content = {
     fr: {
@@ -33,7 +69,7 @@ export default function ContactPage() {
     ar: {
       contactInfoTitle: 'معلومات الاتصال',
       addressLabel: 'العنوان',
-      address: 'عيادة الأسنان للدكتورة فردوس مستين\nالعمارة ٣، الطابق ٢، رقم ٧\nإقامة نادية\n١٣ شارع إبراهيم الروداني\nالدار البيضاء ٢٠٣٩٠، المغرب',
+      address: 'عيادة الأسنان للدكتورة فردوس موستعين\nالعمارة ٣، الطابق ٢، رقم ٧\nإقامة نادية\n١٣ شارع إبراهيم الروداني\nالدار البيضاء ٢٠٣٩٠، المغرب',
       phoneLabel: 'الهاتف',
       callNow: 'اتصل الآن',
       whatsappLabel: 'واتساب',

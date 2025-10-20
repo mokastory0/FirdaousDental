@@ -2,9 +2,34 @@ import TestimonialCard from '@/components/TestimonialCard';
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function TestimonialsPage() {
   const { language } = useLanguage();
+
+  useSEO({
+    title: {
+      fr: 'Avis Patients - Témoignages | Cabinet Dentaire Casablanca',
+      ar: 'آراء المرضى | عيادة أسنان الدار البيضاء',
+      en: 'Patient Reviews - Testimonials | Dental Clinic Casablanca'
+    },
+    description: {
+      fr: 'Avis patients du Cabinet Dr. Firdaous MOUSTAINE à Casablanca. Note 5★ sur Google. Découvrez les témoignages de nos patients satisfaits.',
+      ar: 'آراء مرضى عيادة د. فردوس موستعين في الدار البيضاء. تقييم ٥★ على جوجل. اكتشف شهادات مرضانا الراضين.',
+      en: 'Patient reviews of Cabinet Dr. Firdaous MOUSTAINE in Casablanca. 5★ rating on Google. Discover testimonials from our satisfied patients.'
+    },
+    keywords: {
+      fr: 'avis dentiste casablanca, témoignages patients, avis google dentiste, dr firdaous moustaine avis',
+      ar: 'آراء طبيب أسنان الدار البيضاء, شهادات مرضى, تقييمات جوجل',
+      en: 'dentist reviews casablanca, patient testimonials, google reviews dentist, dr firdaous moustaine reviews'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Patient Testimonials",
+      "description": "Patient reviews and testimonials for Cabinet Dentaire Dr. Firdaous MOUSTAINE"
+    }
+  });
 
   const content = {
     fr: {

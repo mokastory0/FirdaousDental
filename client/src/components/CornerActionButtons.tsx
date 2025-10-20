@@ -48,11 +48,19 @@ export default function CornerActionButtons({ onWhatsAppClick }: CornerActionBut
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:+212520960611';
+    // Small delay to allow GTM tracking to fire before navigation
+    setTimeout(() => {
+      window.location.href = 'tel:+212520960611';
+    }, 300);
   };
 
   const handleBook = () => {
-    window.open('https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108', '_blank');
+    // Preserve GCLID and other UTM parameters for Google Ads tracking
+    const urlParams = new URLSearchParams(window.location.search);
+    const gclid = urlParams.get('gclid');
+    const baseUrl = 'https://dentisto.ma/index.php/rendez-vous/docteurs/kamal-amar-2108';
+    const bookingUrl = gclid ? `${baseUrl}?gclid=${gclid}` : baseUrl;
+    window.open(bookingUrl, '_blank');
   };
 
   return (
@@ -74,7 +82,7 @@ export default function CornerActionButtons({ onWhatsAppClick }: CornerActionBut
           {/* Booking Button - Center, Prominent */}
           <Button
             onClick={handleBook}
-            className="h-[56px] px-4 flex-1 rounded-full shadow-xl bg-[#EF4444] hover:bg-[#DC2626] text-white transition-all duration-300 hover:scale-105 active:scale-95 gap-2 font-bold text-sm"
+            className="h-[56px] px-4 flex-1 rounded-full shadow-xl bg-[#EF4444] hover:bg-[#DC2626] text-white transition-all duration-300 hover:scale-105 active:scale-95 gap-2 font-bold text-sm [&>*]:pointer-events-none"
             aria-label={c.book}
             data-testid="cta-book-mobile"
           >
@@ -121,7 +129,7 @@ export default function CornerActionButtons({ onWhatsAppClick }: CornerActionBut
         <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] pointer-events-auto">
           <Button
             onClick={handleBook}
-            className="h-16 px-6 rounded-full shadow-2xl bg-[#EF4444] hover:bg-[#DC2626] text-white transition-all duration-300 hover:scale-105 active:scale-95 gap-2 font-bold text-base"
+            className="h-16 px-6 rounded-full shadow-2xl bg-[#EF4444] hover:bg-[#DC2626] text-white transition-all duration-300 hover:scale-105 active:scale-95 gap-2 font-bold text-base [&>*]:pointer-events-none"
             aria-label={c.book}
             data-testid="cta-book-floating"
           >

@@ -47,7 +47,7 @@ const WhatsAppChatWidget = forwardRef<WhatsAppChatWidgetRef>((props, ref) => {
     },
     ar: {
       greeting: 'سؤال؟ دعنا نتحدث!',
-      title: 'عيادة الأسنان د. فردوس مستين',
+      title: 'عيادة الأسنان د. فردوس موستعين',
       message: 'مرحباً 👋\n\nكيف يمكنني مساعدتك؟',
       whatsappButton: 'ابدأ المحادثة',
       callButton: 'أو اتصل بنا:',
@@ -111,7 +111,19 @@ const WhatsAppChatWidget = forwardRef<WhatsAppChatWidgetRef>((props, ref) => {
   };
 
   const handleCall = () => {
-    window.location.href = 'tel:+212520960611';
+    // Push event to dataLayer for GTM
+    if ((window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: 'call_button_click',
+        button_location: 'whatsapp_widget',
+        phone_number: '+212520960611'
+      });
+    }
+    
+    // Small delay to allow GTM tracking to fire before navigation
+    setTimeout(() => {
+      window.location.href = 'tel:+212520960611';
+    }, 300);
   };
 
   const handleClose = () => {

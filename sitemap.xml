@@ -34,7 +34,19 @@
     <loc>https://couronnedentaire.ma/fr/services/crowns</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/fr/services/crowns/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/fr/services/whitening/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
   </url>
   <url>
     <loc>https://couronnedentaire.ma/fr/services/implants</loc>
@@ -160,7 +172,19 @@
     <loc>https://couronnedentaire.ma/ar/services/crowns</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/ar/services/crowns/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/ar/services/whitening/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
   </url>
   <url>
     <loc>https://couronnedentaire.ma/ar/services/implants</loc>
@@ -286,7 +310,19 @@
     <loc>https://couronnedentaire.ma/en/services/crowns</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/en/services/crowns/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://couronnedentaire.ma/en/services/whitening/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-20</lastmod>
   </url>
   <url>
     <loc>https://couronnedentaire.ma/en/services/implants</loc>

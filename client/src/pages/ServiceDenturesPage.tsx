@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,11 +7,41 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
+import { useSEO } from '@/hooks/useSEO';
 import denturesImage from '@assets/stock_images/dentures_prosthetic__8598c3a9.jpg';
 
 export default function ServiceDenturesPage() {
   const { language, t } = useLanguage();
   const { localizePath } = useLocalizedPath();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useSEO({
+    title: {
+      fr: 'Prothèses Dentaires à Casablanca | Dr. Firdaous MOUSTAINE',
+      ar: 'أطقم الأسنان في الدار البيضاء | د. فردوس موستعين',
+      en: 'Dental Prostheses in Casablanca | Dr. Firdaous MOUSTAINE'
+    },
+    description: {
+      fr: 'Prothèses dentaires à Casablanca. Prothèses complètes et partielles personnalisées. Restaurez votre sourire et fonction masticatoire. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'أطقم الأسنان في الدار البيضاء. أطقم كاملة وجزئية مخصصة. استعد ابتسامتك ووظيفة المضغ. عيادة د. فردوس موستعين.',
+      en: 'Dental prostheses in Casablanca. Complete and partial custom dentures. Restore your smile and chewing function. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'prothèse dentaire casablanca, dentier, prothèse complète, prothèse partielle, dentiste casablanca',
+      ar: 'طقم أسنان الدار البيضاء, أطقم الأسنان, طقم كامل, طقم جزئي',
+      en: 'dental prosthesis casablanca, dentures, complete denture, partial denture, dentist casablanca'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "MedicalProcedure",
+      "name": "Dental Prostheses",
+      "description": "Professional dental prosthesis services in Casablanca",
+      "procedureType": "Prosthodontics"
+    }
+  });
 
   const content = {
     fr: {
@@ -51,7 +82,7 @@ export default function ServiceDenturesPage() {
     ar: {
       title: 'أطقم الأسنان في الدار البيضاء',
       subtitle: 'حلول كاملة لتعويض جميع أسنانك',
-      intro1: 'أطقم الأسنان هي أجهزة قابلة للإزالة أو ثابتة مصممة لتعويض عدة أسنان مفقودة أو جميع الأسنان. في عيادة الدكتورة فردوس مستين بالدار البيضاء، نقدم أطقم أسنان حديثة ومريحة وجمالية تستعيد ابتسامتك وجودة حياتك.',
+      intro1: 'أطقم الأسنان هي أجهزة قابلة للإزالة أو ثابتة مصممة لتعويض عدة أسنان مفقودة أو جميع الأسنان. في عيادة الدكتورة فردوس موستعين بالدار البيضاء، نقدم أطقم أسنان حديثة ومريحة وجمالية تستعيد ابتسامتك وجودة حياتك.',
       intro2: 'سواء كانت أطقم كاملة أو جزئية أو قابلة للإزالة أو مثبتة على الغرسات، نستخدم مواد عالية الجودة وتقنيات متقدمة لنقدم لك حلولًا متينة وطبيعية. أطقم أسناننا مصنوعة حسب الطلب لتتناسب تمامًا مع فمك.',
       section1Title: 'أنواع أطقم الأسنان',
       section1Text1: 'هناك عدة أنواع من أطقم الأسنان مناسبة لحالات مختلفة. الطقم الكامل القابل للإزالة (طقم الأسنان) يعوض جميع أسنان الفك ويرتكز على اللثة. الطقم الجزئي القابل للإزالة يعوض عدة أسنان مفقودة ويثبت على الأسنان الطبيعية المتبقية بواسطة خطافات. الطقم الثابت على الغرسات يوفر ثباتًا أقصى بفضل زراعة الأسنان.',

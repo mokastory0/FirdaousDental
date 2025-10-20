@@ -2,9 +2,74 @@ import { Accordion } from '@/components/ui/accordion';
 import FAQItem from '@/components/FAQItem';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSEO } from '@/hooks/useSEO';
 
 export default function FAQPage() {
   const { language } = useLanguage();
+
+  useSEO({
+    title: {
+      fr: 'FAQ - Questions Fréquentes | Cabinet Dentaire Casablanca',
+      ar: 'الأسئلة الشائعة | عيادة أسنان الدار البيضاء',
+      en: 'FAQ - Frequently Asked Questions | Dental Clinic Casablanca'
+    },
+    description: {
+      fr: 'Questions fréquentes sur les soins dentaires à Casablanca. Rendez-vous, traitements, prix, urgences. Cabinet Dr. Firdaous MOUSTAINE.',
+      ar: 'أسئلة شائعة حول رعاية الأسنان في الدار البيضاء. مواعيد، علاجات، أسعار، طوارئ. عيادة د. فردوس موستعين.',
+      en: 'Frequently asked questions about dental care in Casablanca. Appointments, treatments, prices, emergencies. Dr. Firdaous MOUSTAINE clinic.'
+    },
+    keywords: {
+      fr: 'faq dentiste casablanca, questions dentaires, rendez-vous dentiste, urgence dentaire, prix soins dentaires',
+      ar: 'أسئلة شائعة طبيب أسنان, موعد طبيب أسنان, طوارئ أسنان',
+      en: 'faq dentist casablanca, dental questions, dentist appointment, dental emergency, dental care prices'
+    },
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment prendre rendez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez prendre rendez-vous par téléphone au +212 520-960611, par WhatsApp, ou via notre formulaire de contact en ligne."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Acceptez-vous les urgences dentaires ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous acceptons les urgences dentaires. Contactez-nous immédiatement et nous ferons notre possible pour vous recevoir le jour même."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure un traitement de blanchiment dentaire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un blanchiment dentaire professionnel au cabinet dure environ une heure. Les résultats sont immédiats et peuvent durer de 6 mois à 2 ans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels moyens de paiement acceptez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous acceptons les paiements en espèces, par carte bancaire, et par virement. Pour les traitements importants, nous pouvons établir un plan de paiement personnalisé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Proposez-vous des devis gratuits ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, après un examen initial, nous vous fournissons un devis détaillé et gratuit pour tous les traitements proposés."
+          }
+        }
+      ]
+    }
+  });
 
   const content = {
     fr: {
