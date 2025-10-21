@@ -1,5 +1,0 @@
-# Redirect www to non-www (301 permanent redirect)
-https://www.couronnedentaire.ma/* https://couronnedentaire.ma/:splat 301!
-
-# SPA fallback - serve index.html for all routes
-/*    /index.html   200

@@ -47,13 +47,16 @@ setMetaTag('og:url', canonicalUrl);
 
 ---
 
-## Additional Required: Server-Side Redirect
+## Additional Recommended: Server-Side Redirect
 
-**IMPORTANT**: The code fix above tells Google which version is canonical, but you should also implement a **301 redirect** from www to non-www at the server level.
+**Note**: The code fix above tells Google which version is canonical and **will resolve the duplicate content error**. A 301 redirect is optional but recommended for better UX.
 
-### Why Both Are Needed:
-1. **Canonical tags** (✅ Done) - Tell Google which version to index
-2. **301 redirect** (⏳ Needed) - Automatically redirect users from www to non-www
+### Why Both Are Helpful:
+1. **Canonical tags** (✅ Done) - Tell Google which version to index (REQUIRED - fixes the error)
+2. **301 redirect** (Optional) - Automatically redirect users from www to non-www (better UX)
+
+### For S3 + CloudFront (Your Setup):
+See `CLOUDFRONT_WWW_REDIRECT_SETUP.md` for detailed CloudFront Function setup instructions.
 
 ---
 
