@@ -24,11 +24,12 @@ export function useSEO(config: SEOConfig) {
       setMetaTag('keywords', config.keywords[language]);
     }
     
-    // Set Open Graph tags
+    // Set Open Graph tags (always use non-www version)
+    const canonicalUrl = window.location.href.replace('://www.', '://');
     setMetaTag('og:title', config.title[language]);
     setMetaTag('og:description', config.description[language]);
-    setMetaTag('og:image', config.ogImage || 'https://couronnedentaire.ma/og-default.jpg');
-    setMetaTag('og:url', window.location.href);
+    setMetaTag('og:image', config.ogImage || 'https://couronnedentaire.ma/og-image.jpg');
+    setMetaTag('og:url', canonicalUrl);
     setMetaTag('og:type', 'website');
     setMetaTag('og:locale', language === 'ar' ? 'ar_MA' : language === 'en' ? 'en_US' : 'fr_FR');
     
@@ -79,6 +80,9 @@ function setMetaTag(name: string, content: string) {
 }
 
 function setCanonical(url: string) {
+  // Always use non-www version as canonical
+  const canonicalUrl = url.replace('://www.', '://');
+  
   let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
   
   if (!link) {
@@ -87,7 +91,7 @@ function setCanonical(url: string) {
     document.head.appendChild(link);
   }
   
-  link.setAttribute('href', url);
+  link.setAttribute('href', canonicalUrl);
 }
 
 function setHreflang() {
