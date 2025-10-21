@@ -491,6 +491,7 @@ export default function GoogleReviewsCarousel({ autoPlay = true, interval = 5000
           onClick={goToPrevious}
           className="rounded-full h-12 w-12 shadow-lg hover:shadow-xl transition-all hover:scale-110"
           data-testid="button-review-previous"
+          aria-label="Previous review"
         >
           <ChevronLeft className="h-6 w-6" />
         </Button>
@@ -517,6 +518,7 @@ export default function GoogleReviewsCarousel({ autoPlay = true, interval = 5000
           onClick={goToNext}
           className="rounded-full h-12 w-12 shadow-lg hover:shadow-xl transition-all hover:scale-110"
           data-testid="button-review-next"
+          aria-label="Next review"
         >
           <ChevronRight className="h-6 w-6" />
         </Button>

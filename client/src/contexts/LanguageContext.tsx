@@ -38,8 +38,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       document.documentElement.lang = newLang;
       document.documentElement.dir = newLang === 'ar' ? 'rtl' : 'ltr';
       localStorage.setItem('language', newLang);
+    } else if (location === '/') {
+      // Root path - use French as default (for SEO and backlinks)
+      setLanguageState('fr');
+      document.documentElement.lang = 'fr';
+      document.documentElement.dir = 'ltr';
+      localStorage.setItem('language', 'fr');
+      // Don't redirect - let root path be indexable
     } else {
-      // No valid language in URL, redirect to saved or default language
+      // Invalid path, redirect to saved or default language
       const saved = localStorage.getItem('language') as Language | null;
       const defaultLang = (saved && ['fr', 'ar', 'en'].includes(saved)) ? saved : 'fr';
       

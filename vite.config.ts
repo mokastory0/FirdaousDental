@@ -30,6 +30,23 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    cssCodeSplit: true, // Split CSS for better caching
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Split vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom', 'react/jsx-runtime'],
+          'router': ['wouter'],
+          'ui': ['lucide-react'],
+        },
+      },
+    },
   },
   server: {
     fs: {

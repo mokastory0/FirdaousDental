@@ -1,6 +1,9 @@
 import { Award, GraduationCap, Heart, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import doctorImage from '@assets/cabinet/firdaouse.jpg';
+// Using optimized responsive WebP images from public/images
+const doctorImageSm = '/images/dr-firdaous-portrait-sm.webp';
+const doctorImageMd = '/images/dr-firdaous-portrait-md.webp';
+const doctorImageLg = '/images/dr-firdaous-portrait-lg.webp';
 
 export default function DoctorIntroSection() {
   const { language } = useLanguage();
@@ -128,9 +131,13 @@ export default function DoctorIntroSection() {
                 {/* Main Image */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <img
-                    src={doctorImage}
+                    src={doctorImageMd}
+                    srcSet={`${doctorImageSm} 400w, ${doctorImageMd} 600w, ${doctorImageLg} 800w`}
+                    sizes="(max-width: 640px) 400px, (max-width: 1024px) 600px, 800px"
                     alt={c.name}
                     className="w-full h-auto object-cover aspect-[3/4] md:aspect-[4/5]"
+                    width="600"
+                    height="800"
                     loading="lazy"
                   />
                   
@@ -140,7 +147,7 @@ export default function DoctorIntroSection() {
                   {/* Name Overlay */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="text-2xl md:text-3xl font-bold mb-1">{c.name}</h3>
-                    <p className="text-sm md:text-base opacity-90">{c.title}</p>
+                    <p className="text-sm md:text-base">{c.title}</p>
                   </div>
                 </div>
               </div>
@@ -177,7 +184,7 @@ export default function DoctorIntroSection() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <h4 className="font-semibold text-sm mb-1">{highlight.title}</h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed">{highlight.text}</p>
+                        <p className="text-xs text-foreground/70 leading-relaxed">{highlight.text}</p>
                       </div>
                     </div>
                   );

@@ -35,10 +35,8 @@ const ServiceGeneralPage = lazy(() => import("@/pages/ServiceGeneralPage"));
 function Router() {
   return (
     <Switch>
-      {/* Root redirect - handled by LanguageContext */}
-      <Route path="/">
-        {() => <div />}
-      </Route>
+      {/* Root path - serve as French homepage for SEO */}
+      <Route path="/" component={HomePage} />
       
       {/* Language-prefixed routes */}
       <Route path="/:lang" component={HomePage} />

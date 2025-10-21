@@ -2,7 +2,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useSEO } from '@/hooks/useSEO';
 import { Award, Calendar, Users, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import doctorImage from '@assets/cabinet/firdaouse.jpg';
+// Using optimized responsive WebP images from public/images
+const doctorImageSm = '/images/dr-firdaous-portrait-sm.webp';
+const doctorImageMd = '/images/dr-firdaous-portrait-md.webp';
+const doctorImageLg = '/images/dr-firdaous-portrait-lg.webp';
 import equipmentImage from '@assets/generated_images/Modern_dental_equipment_technology_344d1782.png';
 
 export default function AboutPage() {
@@ -124,9 +127,14 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
           <div className="rounded-lg overflow-hidden">
             <img
-              src={doctorImage}
+              src={doctorImageMd}
+              srcSet={`${doctorImageSm} 400w, ${doctorImageMd} 600w, ${doctorImageLg} 800w`}
+              sizes="(max-width: 640px) 400px, (max-width: 1024px) 600px, 800px"
               alt="Dr. Firdaous MOUSTAINE"
               className="w-full h-auto object-cover"
+              width="600"
+              height="800"
+              loading="lazy"
             />
           </div>
 

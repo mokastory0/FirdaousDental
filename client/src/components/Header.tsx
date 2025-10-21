@@ -6,7 +6,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeToggle from './ThemeToggle';
-import logoImage from '@assets/ChatGPT Image Oct 15, 2025, 10_01_54 PM_1760562210918.png';
+// Using optimized WebP logo from public/images
+const logoImage = '/images/dr-firdaous-logo.webp';
+const logoImage2x = '/images/dr-firdaous-logo@2x.webp';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,13 +43,17 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between gap-1">
           <Link href={localizePath('')} className="flex items-center gap-1.5 md:gap-3 flex-1 min-w-0 overflow-hidden" data-testid="link-home">
             <img 
-              src={logoImage} 
+              src={logoImage}
+              srcSet={`${logoImage2x} 2x`}
               alt="Dr. Firdaous MOUSTAINE" 
               className="h-8 w-8 md:h-12 md:w-12 object-contain flex-shrink-0"
+              width="48"
+              height="48"
+              loading="eager"
             />
             <div className="flex flex-col min-w-0 flex-1 overflow-hidden">
               <div className="text-xs md:text-xl font-bold text-primary leading-tight truncate">{doctorName[language]}</div>
-              <div className="hidden md:block text-xs text-muted-foreground">{t('nav.logo.subtitle')}</div>
+              <div className="hidden md:block text-xs text-foreground/70">{t('nav.logo.subtitle')}</div>
             </div>
           </Link>
 
@@ -84,6 +90,7 @@ export default function Header() {
               className="h-9 w-9"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               data-testid="button-mobile-menu"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>

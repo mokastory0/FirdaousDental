@@ -274,7 +274,7 @@ export default function ServiceCrownsPage() {
           <section className="bg-primary text-primary-foreground rounded-lg p-8 md:p-12">
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-4">{c.ctaTitle}</h2>
-              <p className="text-lg mb-8 opacity-90">{c.ctaText}</p>
+              <p className="text-lg mb-8">{c.ctaText}</p>
               <Link href={localizePath('contact')}>
                 <Button size="lg" variant="secondary" className="text-lg" data-testid="button-book-crowns">
                   {c.ctaButton}

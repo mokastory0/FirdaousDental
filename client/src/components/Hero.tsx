@@ -3,8 +3,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useLocalizedPath } from '@/hooks/useLocalizedPath';
 import { Link } from 'wouter';
 import { Phone, Calendar, Award, Users, Star, ChevronDown } from 'lucide-react';
-import heroImage from '@assets/dentistback_1759836434776.jpg';
-import googleMapsIcon from '@assets/googlemaps.png';
+// Using optimized WebP images from public/images
+const heroImageDesktop = '/images/hero-bg.webp';
+const heroImageMobile = '/images/hero-bg-mobile.webp';
+const googleMapsIcon = '/images/google-maps-icon.webp';
+const googleMapsIcon2x = '/images/google-maps-icon@2x.webp';
 
 export default function Hero() {
   const { t, language } = useLanguage();
@@ -21,10 +24,20 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-4 md:pt-0">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
+      <div className="absolute inset-0">
+        <picture>
+          <source media="(max-width: 768px)" srcSet={heroImageMobile} type="image/webp" />
+          <source media="(min-width: 769px)" srcSet={heroImageDesktop} type="image/webp" />
+          <img 
+            src={heroImageDesktop} 
+            alt="Cabinet Dentaire Moderne" 
+            className="absolute inset-0 w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            width="1920"
+            height="1080"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20 md:from-black/70 md:via-black/50 md:to-black/30" />
       </div>
 
@@ -67,7 +80,7 @@ export default function Hero() {
         </div>
         
         {/* Parking Info with Maps Button */}
-        <div className="flex items-center justify-center gap-3 mb-6 text-sm md:text-base opacity-90 animate-in fade-in duration-700 delay-1000">
+        <div className="flex items-center justify-center gap-3 mb-6 text-sm md:text-base animate-in fade-in duration-700 delay-1000">
           <a
             href="https://maps.app.goo.gl/LBgGJ254TNFkzZe27"
             target="_blank"
@@ -75,7 +88,15 @@ export default function Hero() {
             className="inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 bg-white hover:bg-white/95 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex-shrink-0"
             data-testid="button-hero-maps"
           >
-            <img src={googleMapsIcon} alt="Google Maps" className="w-6 h-6 md:w-7 md:h-7 object-contain" />
+            <img 
+              src={googleMapsIcon}
+              srcSet={`${googleMapsIcon2x} 2x`}
+              alt="Google Maps" 
+              className="w-6 h-6 md:w-7 md:h-7 object-contain"
+              width="28"
+              height="28"
+              loading="lazy"
+            />
           </a>
           <span className="drop-shadow">{t('hero.parking')}</span>
         </div>
@@ -100,7 +121,7 @@ export default function Hero() {
           >
             <Phone className="h-5 w-5 flex-shrink-0" />
             <div className="flex flex-col items-start min-w-0">
-              <span className="text-xs opacity-90">{t('hero.phone')}</span>
+              <span className="text-xs">{t('hero.phone')}</span>
               <span className="font-bold text-sm" dir="ltr">+212 520-960611</span>
             </div>
           </a>

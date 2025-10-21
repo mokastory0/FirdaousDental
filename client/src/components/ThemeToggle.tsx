@@ -12,6 +12,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       data-testid="button-theme-toggle"
       className="h-9 w-9"
+      aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
     >
       {theme === 'light' ? (
         <Moon className="h-4 w-4" />

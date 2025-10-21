@@ -2,7 +2,9 @@ import { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import { MessageCircle, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logoImage from '@assets/ChatGPT Image Oct 15, 2025, 10_01_54 PM_1760562210918.png';
+// Using optimized WebP logo from public/images
+const logoImage = '/images/dr-firdaous-logo.webp';
+const logoImage2x = '/images/dr-firdaous-logo@2x.webp';
 
 export interface WhatsAppChatWidgetRef {
   open: () => void;

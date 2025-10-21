@@ -369,7 +369,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {content.ctaTitle}
           </h2>
-          <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-lg mb-8 max-w-2xl mx-auto">
             {content.ctaSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

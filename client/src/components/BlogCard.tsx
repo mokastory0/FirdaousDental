@@ -39,7 +39,7 @@ export default function BlogCard({ id, title, excerpt, category, date, readTime,
           {excerpt}
         </p>
         <div className="flex items-center justify-between mt-4 pt-4 border-t">
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
+          <div className="flex items-center gap-4 text-xs text-foreground/70">
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
               {date}

@@ -477,9 +477,9 @@ export default function WhiteningPricingPage() {
 
           <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-2xl p-8 md:p-12 shadow-2xl">
             <div className="text-center max-w-2xl mx-auto">
-              <Calendar className="h-12 w-12 mx-auto mb-4 opacity-90" />
+              <Calendar className="h-12 w-12 mx-auto mb-4 " />
               <h2 className="text-3xl md:text-4xl font-bold mb-4">{c.ctaTitle}</h2>
-              <p className="text-lg mb-8 opacity-90">{c.ctaText}</p>
+              <p className="text-lg mb-8 ">{c.ctaText}</p>
               <Link href={localizePath('contact')}>
                 <Button size="lg" variant="secondary" className="text-lg font-bold shadow-xl hover:scale-105 transition-transform">
                   {c.ctaButton}

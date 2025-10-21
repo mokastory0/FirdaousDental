@@ -11,16 +11,27 @@
       gtag('config', 'G-FT0M3Q8FQJ'); // GA4 MyWeb
     </script>
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5834GGST');</script>
+    <!-- Google Tag Manager - Deferred for performance -->
+    <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5834GGST');
+      }, 2000);
+    });
+    </script>
     <!-- End Google Tag Manager -->
     
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/dr-firdaous-logo.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/dr-firdaous-logo.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/dr-firdaous-logo@2x.webp">
     
     <!-- Default Meta Tags -->
     <title>Cabinet Dentaire Dr. Firdaous MOUSTAINE | Casablanca - Prix Transparents</title>
@@ -44,9 +55,27 @@
     <meta property="twitter:description" content="Dr. Firdaous MOUSTAINE - Dentiste à Casablanca. Prix transparents: Blanchiment 3000-4500 DH, Couronnes 3000-5000 DH. Devis gratuit." />
     <meta property="twitter:image" content="https://couronnedentaire.ma/og-image.jpg" />
     
+    <!-- Preload critical hero image for LCP (WebP optimized) -->
+    <link rel="preload" as="image" href="/images/hero-bg.webp" fetchpriority="high" type="image/webp">
+    <link rel="preload" as="image" href="/images/hero-bg-mobile.webp" media="(max-width: 768px)" type="image/webp">
+    
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inlined for instant render -->
+    <style>*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:hsl(var(--border))}html,body{overflow-x:hidden;max-width:100vw}body{position:relative;margin:0;font-family:var(--font-sans);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:hsl(var(--background));color:hsl(var(--foreground))}:root{--background:0 0% 98%;--foreground:200 15% 20%;--border:200 8% 88%;--primary:190 65% 45%;--primary-foreground:190 65% 98%;--font-sans:'Inter','Cairo',-apple-system,BlinkMacSystemFont,sans-serif;--font-serif:'Playfair Display',Georgia,serif}.dark{--background:200 15% 12%;--foreground:0 0% 95%;--border:200 12% 22%;--primary:190 50% 55%;--primary-foreground:190 50% 98%}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.inset-0{inset:0}.z-10{z-index:10}.z-50{z-index:50}.flex{display:flex}.hidden{display:none}.h-full{height:100%}.w-full{width:100%}.min-h-screen{min-height:100vh}.items-center{align-items:center}.justify-center{justify-content:center}.overflow-hidden{overflow:hidden}.bg-cover{background-size:cover}.bg-center{background-position:center}.object-cover{object-fit:cover}.text-center{text-align:center}.text-white{color:#fff}.font-bold{font-weight:700}.font-serif{font-family:var(--font-serif)}@media(min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}}</style>
+    
+    <!-- Load fonts asynchronously with optional display to reduce CLS -->
+    <link 
+      rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Cairo:wght@400;500;600;700&display=optional" 
+      media="print" 
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

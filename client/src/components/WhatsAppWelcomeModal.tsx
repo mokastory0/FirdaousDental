@@ -10,7 +10,9 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import logoImage from '@assets/ChatGPT Image Oct 15, 2025, 10_01_54 PM_1760562210918.png';
+// Using optimized WebP logo from public/images
+const logoImage = '/images/dr-firdaous-logo.webp';
+const logoImage2x = '/images/dr-firdaous-logo@2x.webp';
 
 export default function WhatsAppWelcomeModal() {
   const { language } = useLanguage();
