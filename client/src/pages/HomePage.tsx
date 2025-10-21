@@ -18,14 +18,14 @@ export default function HomePage() {
   // SEO Configuration
   useSEO({
     title: {
-      fr: 'Cabinet Dentaire Dr. Firdaous MOUSTAINE à Casablanca | Dentiste',
-      ar: 'عيادة الأسنان د. فردوس موستعين في الدار البيضاء | طبيب أسنان',
-      en: 'Dental Clinic Dr. Firdaous MOUSTAINE in Casablanca | Dentist'
+      fr: 'Dentiste Casablanca – Soins dentaires modernes | Dr Firdaous Moustaine',
+      ar: 'طبيب أسنان الدار البيضاء – رعاية أسنان حديثة | د. فردوس موستعين',
+      en: 'Dentist Casablanca – Modern Dental Care | Dr Firdaous Moustaine'
     },
     description: {
-      fr: 'Cabinet dentaire Dr. Firdaous MOUSTAINE à Casablanca. Blanchiment dentaire, implants, couronnes, orthodontie, soins dentaires pédiatriques. Soins dentaires de qualité avec technologies modernes.',
-      ar: 'عيادة الأسنان د. فردوس موستعين في الدار البيضاء. تبييض الأسنان، زراعة الأسنان، التيجان، تقويم الأسنان، رعاية أسنان الأطفال. رعاية أسنان عالية الجودة بتقنيات حديثة.',
-      en: 'Dental Clinic Dr. Firdaous MOUSTAINE in Casablanca. Teeth whitening, implants, crowns, orthodontics, pediatric dental care. Quality dental care with modern technologies.'
+      fr: 'Cabinet dentaire à Casablanca. Détartrage, blanchiment, implants et soins sans douleur. Prenez rendez-vous dès aujourd\'hui.',
+      ar: 'عيادة أسنان في الدار البيضاء. تنظيف، تبييض، زراعة ورعاية بدون ألم. احجز موعدك اليوم.',
+      en: 'Dental clinic in Casablanca. Scaling, whitening, implants and painless care. Book your appointment today.'
     },
     keywords: {
       fr: 'dentiste casablanca, cabinet dentaire casablanca, dr firdaous moustaine, blanchiment dentaire, implants dentaires, couronnes dentaires, orthodontie casablanca',

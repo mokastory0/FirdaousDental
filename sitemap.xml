@@ -1,423 +1,448 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Root & Homepage -->
   <url>
-    <loc>https://couronnedentaire.ma/</loc>
+    <loc>https://dentistecasablanca.info/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
+  
+  <!-- FRENCH (FR) - Main Language -->
   <url>
-    <loc>https://couronnedentaire.ma/fr</loc>
+    <loc>https://dentistecasablanca.info/fr</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/services</loc>
+    <loc>https://dentistecasablanca.info/fr/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- FR Services - New French URLs with Casablanca -->
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/blanchiment-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/blanchiment-casablanca/prix</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/couronne-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/couronne-casablanca/prix</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/implants-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/prothese-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/orthodontie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/parodontologie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/soins-generaux-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/services/pedodontie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- FR Other Pages -->
+  <url>
+    <loc>https://dentistecasablanca.info/fr/a-propos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/avis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/contact</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
+  
+  <!-- FR Blog Articles -->
   <url>
-    <loc>https://couronnedentaire.ma/fr/services/whitening</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/pediatric</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/crowns</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/crowns/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/whitening/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/implants</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/dentures</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/orthodontics</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/gum</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/services/general</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/fr/about</loc>
+    <loc>https://dentistecasablanca.info/fr/blog/prevenir-caries</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/testimonials</loc>
+    <loc>https://dentistecasablanca.info/fr/blog/blanchiment-professionnel</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/faq</loc>
+    <loc>https://dentistecasablanca.info/fr/blog/implants-vs-bridges</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog</loc>
+    <loc>https://dentistecasablanca.info/fr/blog/premiere-visite-enfant</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/blog/hygiene-bucco-dentaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/fr/blog/orthodontie-adulte</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- ARABIC (AR) - With French URLs -->
+  <url>
+    <loc>https://dentistecasablanca.info/ar</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.9</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/contact</loc>
+    <loc>https://dentistecasablanca.info/ar/services</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
+  
+  <!-- AR Services - French URLs -->
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/prevenir-caries</loc>
+    <loc>https://dentistecasablanca.info/ar/services/blanchiment-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/blanchiment-professionnel</loc>
+    <loc>https://dentistecasablanca.info/ar/services/blanchiment-casablanca/prix</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/implants-vs-bridges</loc>
+    <loc>https://dentistecasablanca.info/ar/services/couronne-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/premiere-visite-enfant</loc>
+    <loc>https://dentistecasablanca.info/ar/services/couronne-casablanca/prix</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/hygiene-bucco-dentaire</loc>
+    <loc>https://dentistecasablanca.info/ar/services/implants-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/fr/blog/orthodontie-adulte</loc>
+    <loc>https://dentistecasablanca.info/ar/services/prothese-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/whitening</loc>
+    <loc>https://dentistecasablanca.info/ar/services/orthodontie-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/services/pediatric</loc>
+    <loc>https://dentistecasablanca.info/ar/services/parodontologie-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/services/crowns</loc>
+    <loc>https://dentistecasablanca.info/ar/services/soins-generaux-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-20</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/services/crowns/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/whitening/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/implants</loc>
+    <loc>https://dentistecasablanca.info/ar/services/pedodontie-casablanca</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
+  
+  <!-- AR Other Pages -->
   <url>
-    <loc>https://couronnedentaire.ma/ar/services/dentures</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/orthodontics</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/gum</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/services/general</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/about</loc>
+    <loc>https://dentistecasablanca.info/ar/a-propos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/testimonials</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog</loc>
+    <loc>https://dentistecasablanca.info/ar/avis</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/contact</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog/prevenir-caries</loc>
+    <loc>https://dentistecasablanca.info/ar/faq</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/ar/blog/blanchiment-professionnel</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog/implants-vs-bridges</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog/premiere-visite-enfant</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog/hygiene-bucco-dentaire</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/ar/blog/orthodontie-adulte</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/whitening</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/pediatric</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/crowns</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/crowns/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/whitening/pricing</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/implants</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/dentures</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/orthodontics</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/gum</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/services/general</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/testimonials</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/faq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
-  </url>
-  <url>
-    <loc>https://couronnedentaire.ma/en/blog</loc>
+    <loc>https://dentistecasablanca.info/ar/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/contact</loc>
+    <loc>https://dentistecasablanca.info/ar/contact</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.7</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- AR Blog Articles -->
+  <url>
+    <loc>https://dentistecasablanca.info/ar/blog/prevenir-caries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/prevenir-caries</loc>
+    <loc>https://dentistecasablanca.info/ar/blog/blanchiment-professionnel</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/blanchiment-professionnel</loc>
+    <loc>https://dentistecasablanca.info/ar/blog/implants-vs-bridges</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/implants-vs-bridges</loc>
+    <loc>https://dentistecasablanca.info/ar/blog/premiere-visite-enfant</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/premiere-visite-enfant</loc>
+    <loc>https://dentistecasablanca.info/ar/blog/hygiene-bucco-dentaire</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/hygiene-bucco-dentaire</loc>
+    <loc>https://dentistecasablanca.info/ar/blog/orthodontie-adulte</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- ENGLISH (EN) - With French URLs -->
+  <url>
+    <loc>https://dentistecasablanca.info/en</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <lastmod>2025-10-21</lastmod>
   </url>
   <url>
-    <loc>https://couronnedentaire.ma/en/blog/orthodontie-adulte</loc>
+    <loc>https://dentistecasablanca.info/en/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- EN Services - French URLs -->
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/blanchiment-casablanca</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <lastmod>2025-10-07</lastmod>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/blanchiment-casablanca/prix</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/couronne-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/couronne-casablanca/prix</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/implants-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/prothese-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/orthodontie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/parodontologie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/soins-generaux-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/services/pedodontie-casablanca</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- EN Other Pages -->
+  <url>
+    <loc>https://dentistecasablanca.info/en/a-propos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/avis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  
+  <!-- EN Blog Articles -->
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/prevenir-caries</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/blanchiment-professionnel</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/implants-vs-bridges</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/premiere-visite-enfant</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/hygiene-bucco-dentaire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://dentistecasablanca.info/en/blog/orthodontie-adulte</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <lastmod>2025-10-21</lastmod>
   </url>
 </urlset>

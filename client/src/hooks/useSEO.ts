@@ -28,7 +28,7 @@ export function useSEO(config: SEOConfig) {
     const canonicalUrl = window.location.href.replace('://www.', '://');
     setMetaTag('og:title', config.title[language]);
     setMetaTag('og:description', config.description[language]);
-    setMetaTag('og:image', config.ogImage || 'https://couronnedentaire.ma/og-image.jpg');
+    setMetaTag('og:image', config.ogImage || 'https://dentistecasablanca.info/og-image.jpg');
     setMetaTag('og:url', canonicalUrl);
     setMetaTag('og:type', 'website');
     setMetaTag('og:locale', language === 'ar' ? 'ar_MA' : language === 'en' ? 'en_US' : 'fr_FR');
@@ -37,7 +37,7 @@ export function useSEO(config: SEOConfig) {
     setMetaTag('twitter:card', 'summary_large_image');
     setMetaTag('twitter:title', config.title[language]);
     setMetaTag('twitter:description', config.description[language]);
-    setMetaTag('twitter:image', config.ogImage || 'https://couronnedentaire.ma/og-default.jpg');
+    setMetaTag('twitter:image', config.ogImage || 'https://dentistecasablanca.info/og-default.jpg');
     
     // Set canonical URL
     setCanonical(window.location.href);
@@ -106,7 +106,7 @@ function setHreflang() {
     const link = document.createElement('link');
     link.rel = 'alternate';
     link.hreflang = lang;
-    link.href = `https://couronnedentaire.ma/${lang}${currentPath}`;
+    link.href = `https://dentistecasablanca.info/${lang}${currentPath}`;
     document.head.appendChild(link);
   });
   
@@ -114,7 +114,7 @@ function setHreflang() {
   const defaultLink = document.createElement('link');
   defaultLink.rel = 'alternate';
   defaultLink.hreflang = 'x-default';
-  defaultLink.href = `https://couronnedentaire.ma/fr${currentPath}`;
+  defaultLink.href = `https://dentistecasablanca.info/fr${currentPath}`;
   document.head.appendChild(defaultLink);
 }
 
